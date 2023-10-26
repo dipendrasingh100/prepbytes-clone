@@ -1,0 +1,247 @@
+.fullStack-header {
+    background-image: url("../assets/images/full-stack-bg.png");
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 550px;
+}
+
+.fullStack-main {
+    padding: 0 20px;
+    min-height: 60vh;
+    margin: 0 auto;
+    max-width: 1280px;
+    display: flex;
+}
+
+.fullStack-main>.left {
+    width: 50%;
+    padding: 80px 0;
+}
+
+.fullStack-main>.left>p:first-child {
+    letter-spacing: .24px;
+    color: #fff;
+}
+
+.fullStack-main>.left>.left-img-container {
+    width: 220px;
+    height: 98px;
+    border-radius: 10px;
+    background: transparent linear-gradient(90deg, #fff, #c7eaff) 0 0 no-repeat padding-box;
+    opacity: 1;
+}
+
+.fullStack-main>.left>h1 {
+    font-size: 28px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.fullStack-main>.left>.left-text {
+    margin-bottom: 45px;
+    font-size: 18px;
+}
+
+.fullStack-main>.left>.left-buttons {
+    display: flex;
+}
+
+.fullStack-main>.left>.left-buttons>a {
+    width: 45%;
+}
+
+.fullStack-main>.left>.left-buttons button {
+    background: transparent;
+    box-shadow: 0 3px 6px rgba(95, 141, 196, .2);
+    border-radius: 5px;
+    color: #ff219f;
+    border: 1px solid #ff219f;
+    padding: 14px 51px 13px 50px;
+    font-weight: 400;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+}
+
+.fullStack-main>.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+    flex-direction: column;
+    top: 55px;
+}
+
+.fullStack-header-right-box {
+    width: 300px;
+    height: 80px;
+    background: #fff 0 0 no-repeat padding-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1607843137254902);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: content-box;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.fullStack-header-right-box .box--heading {
+    font-size: 15px;
+    letter-spacing: 0;
+    color: #424242;
+}
+
+.fullStack-header-right-box .box--text {
+    font-size: 14px;
+    letter-spacing: 0;
+    color: #858585;
+}
+
+.fullStack-batchDetails {
+    z-index: 500;
+    width: 100%;
+    border: .5px solid #c2c2c2;
+    background: #f7f7f7 0 0 no-repeat padding-box;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    color: #606060;
+}
+
+.batchDetails-container {
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0 0;
+}
+
+.batchDetails-container>h4 {
+    margin-left: 10px;
+    width: 150px;
+    font-weight: 500;
+}
+
+.batchDetails-section {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.batchDetails-date-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.batch-container {
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1607843137254902);
+    background: #fff 0 0 no-repeat padding-box;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    width: 225px;
+    height: 65px;
+}
+
+.batch-container .batch-label {
+    display: flex;
+    cursor: pointer;
+}
+
+input[type=radio] {
+    display: inline !important;
+    width: 18px !important;
+    height: 18px !important;
+    position: relative;
+    top: 10px;
+}
+
+.batch-text-container {
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+span {
+    display: inline-block;
+    letter-spacing: 1.3px;
+    font-weight: 400;
+}
+
+.batch-text-container>h5 {
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+}
+
+.batch-text-container>p {
+    color: #f78077;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.batchDetails-enroll-container {
+    position: relative;
+    top: -5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.batchDetails-actprice {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    color: #f78077;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.batchDetails-atc-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.batchDetails-atc-container .enroll-now-btn>button {
+    background: #f78077 0 0 no-repeat padding-box;
+    border-radius: 6px;
+    border: none;
+    min-width: 130px;
+    padding: 5px 10px;
+
+    color: #fffaf0;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.batchDetails-atc-container> .try-free{
+    align-items: center;
+}
+
+.batchDetails-atc-container> .try-free>button{
+    background: #00a5ec 0 0 no-repeat padding-box;
+    border-radius: 6px;
+    border: none;
+    width: 120px;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: #f7f7f7;
+    min-width: 80px;
+    margin-left: 5%;
+    cursor: pointer;
+    padding: 5px 10px;
+}

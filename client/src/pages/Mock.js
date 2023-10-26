@@ -1,0 +1,47 @@
+import React, { useEffect } from 'react'
+import "../css/mock.css"
+import TestCard from '../components/TestCard'
+import { useDispatch, useSelector } from 'react-redux'
+import { getTests } from '../app/mockSlice'
+
+const Mock = () => {
+    const dispatch = useDispatch()
+    const { tests, error } = useSelector(state => state.mock)
+    useEffect(() => {
+        dispatch(getTests())
+    }, [dispatch])
+
+    return (
+        <div className='mock-main'>
+            <div className="mock-header">
+                <div className="mock-header-container">
+                    <h2 className="mock-header-top">
+                        Mock Tests
+                    </h2>
+                    <p className="mock-header-bottom">
+                        Technical and Aptitude Test is a very important process of most of the placement tests. Crack your next placement with series of PrepBytes practice and mock tests. Practice subject-wise and company-wise tests. Take real-time mock tests with other students and test your preparation.
+                    </p>
+                </div>
+            </div>
+
+            <div className="mock-featured-list">
+                <div className="mock-featured-main">
+                    <p>Featured Mock Tests</p>
+                    <div className="mock-featured-main-container">
+                        <p className="mock-featured-main-container--heading">
+                            Past Mock Tests
+                        </p>
+                        <div className="mock-featured-main-container-tests">
+                            {tests && tests.map(test => (
+                                <TestCard key={test._id} title={test.title} thumb={test.thumbnail} date={test.date} participants={test.participants} duration={test.duration} />
+                            ))
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Mock

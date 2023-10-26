@@ -21,7 +21,8 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: [true, "please enter a valid password"],
-        minLength: [8, "Password should be be greater than 8 characters"]
+        minLength: [8, "Password should be be greater than 8 characters"],
+        select: false
     },
     college: {
         type: String,
@@ -34,7 +35,23 @@ const userSchema = new Schema({
     createdAt: {
         type: Date,
         default: Date.now,
-    }
+    },
+    resetPasswordToken: String,
+    resetPasswordExpire: Date
 })
+
+userSchema.methods.getResetPasswordToken = function () {
+
+    //generate Token
+    const resetToken = crypto.randomBytes(20).toString("hex")
+
+    this.resetPasswordToken = crypto
+        .createHash("sha256")
+        .update(resetToken)
+        .digest("hex")
+
+    this.resetPasswordExpire = Date.now() + 15 * 60 * 1000
+    return resetToken
+}
 
 module.exports = model("User", userSchema)

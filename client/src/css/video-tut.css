@@ -1,0 +1,36 @@
+.videoLib-header {
+    background: #d9f5f9 0 0 no-repeat padding-box;
+    min-height: 300px;
+    max-width: 1251px;
+    margin: auto;
+}
+
+.videoLib-header-container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1168px;
+    color: #fff;
+    justify-content: space-between;
+}
+
+.videoLib-header-container .left {
+    width: 40%;
+    padding-top: 65px;
+}
+
+.videoLib-header-container .left .left-top {
+    font-size: 32px;
+    font-weight: 600;
+    padding-top: 16px;
+    padding-bottom: 19px;
+    margin-top: 10px;
+    color: #00a5ec;
+}
+
+.videoLib-header-container .left .left-bottom {
+    font-size: 14px;
+    letter-spacing: .14px;
+    padding-bottom: 29px;
+    padding-right: 10px;
+    color: #424242;
+}

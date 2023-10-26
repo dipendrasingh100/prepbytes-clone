@@ -1,0 +1,109 @@
+.coding-journey {
+    background: #f8fafa;
+    min-height: 1000px;
+}
+
+.coding-journey-container {
+    padding: 80px 0 0;
+    margin: 0 auto;
+    display: flex;
+    min-height: 1440px;
+}
+
+.coding-journey-left {
+    width: 50%;
+}
+
+.coding-journey-left>img {
+    width: 80%;
+}
+
+.coding-journey-right {
+    width: 50%;
+    padding-right: 144px;
+}
+
+.coding-journey-right--heading {
+    color: #424242;
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.coding-journey-right-container-card-one {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    padding: 20px 0;
+}
+
+.coding-journey-right-container-card-one .left {
+    width: 50%;
+}
+
+.coding-journey-right-container-card-one .right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-bottom: -40px;
+}
+
+.coding-journey-right-container-card-one .left--heading,
+.coding-journey-right-container-card-two .right--heading {
+    color: #f78077;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 3px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.coding-journey-right-container-card-one .left-box,
+.coding-journey-right-container-card-two .right-box {
+    background: #fff 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 25px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    width: 250px;
+}
+
+.coding-journey-right-container-card-one .left-box>img,
+.coding-journey-right-container-card-two .right-box>img {
+    margin-left: -30px;
+}
+
+
+.coding-journey-right-container-card-one .left-box>p,
+.coding-journey-right-container-card-two .right-box>p {
+    margin-left: 20px;
+    padding: 20px 0;
+    font-weight: 500;
+    width: 80%;
+}
+
+.coding-journey-right-container-card-two {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 30px 0;
+    padding: 20px 0;
+}
+
+.coding-journey-right-container-card-two .left {
+    width: 50%;
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+}
+
+.coding-journey-right-container-card-two .right {
+    width: 50%;
+}
+
+.coding-journey-right-container-card-three{
+    padding-left: 50px;
+}

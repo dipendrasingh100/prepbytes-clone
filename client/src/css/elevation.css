@@ -1,0 +1,195 @@
+.elevationCourse-header {
+    color: #3e4041;
+    min-height: 550px;
+    background: #fff;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+.elevationCourse-header-main {
+    margin: 0 auto;
+    max-width: 1286px;
+    display: flex;
+}
+
+.elevationCourse-header-main .left {
+    width: 52%;
+    padding: 80px 40px;
+}
+
+
+.elevationCourse-header-main .left>h1 {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.elevationCourse-header-main .left .left-text {
+    width: 70%;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #424242;
+}
+
+.elevationCourse-header-main .left .left-list {
+    margin: 25px 0;
+}
+
+.elevationCourse-header-main .left .left-list>li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+
+.elevationCourse-header-main .left .left-list>li>img {
+    height: 12px;
+    width: 12px;
+}
+
+.elevationCourse-header-main .left .left-list>li>p {
+    margin-left: 7px;
+    font-size: 18px;
+    color: #424242;
+}
+
+.elevationCourse-header-main .left-buttons>button:first-child {
+    margin-right: 30px;
+    background: #00a5ec 0 0 no-repeat padding-box;
+    border: none;
+    padding: 15px 52px 14px 51px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.elevationCourse-header-main .left-buttons>button:last-child {
+    background: transparent;
+    box-shadow: 0 3px 6px rgba(95, 141, 196, .2);
+    border-radius: 5px;
+    color: #00a5ec;
+    border: 1px solid #00a5ec;
+    padding: 14px 51px 13px 50px;
+    font-weight: 400;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+}
+
+.elevationCourse-header-main>.right {
+    background-image: url("../assets/images/ISA-masthead-mern-5.webp");
+    width: 70%;
+    height: 620px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.newBatch {
+    max-width: 1286px;
+    background: #e5f4fb 0 0 no-repeat padding-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newBatch-main {
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.newBatch-main .left {
+    width: 35%;
+}
+
+.newBatch-main .left>p:first-child {
+    letter-spacing: 0;
+    color: #424242;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.newBatch-main .left>p:last-child {
+    letter-spacing: 0;
+    color: #f7f7f7;
+    background: #00a5ec 0 0 no-repeat padding-box;
+    display: inline-block;
+    padding: 7px 12px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.newBatch-main .right {
+    width: 65%;
+}
+
+
+.newBatch-main .right .right-top {
+    display: flex;
+    justify-content: center;
+}
+
+.right-point-outer {
+    display: flex;
+    position: relative;
+}
+
+.right-point-outer:not(:last-child) {
+    width: 33.3%;
+}
+
+.newBatch-right-point-container {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newBatch-right-point-container>img {
+    height: 60px;
+    width: 60px;
+    background: transparent linear-gradient(67deg, #00a5ec, #99e0ff) 0 0 no-repeat padding-box;
+    border-radius: 50%;
+}
+
+.newBatch-right-point-container-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.newBatch-right-point-container-text>span:first-child {
+    letter-spacing: 0;
+    color: #095170;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.newBatch-right-point-container-text>span:last-child{
+    font-size: 14px;
+    background: #d6f3ff 0 0 no-repeat padding-box;
+    border: .5px dashed #00a5ec;
+    border-radius: 6px;
+    display: inline;
+    padding: 2px 4px;
+    text-align: center;
+    letter-spacing: 0;
+    color: #424242;
+}
+
+.right-point-outer:not(:last-child)::after{
+    content: "";
+    width: 98%;
+    height: 2px;
+    background: transparent linear-gradient(90deg,#00a5ec,#99e0ff) 0 0 no-repeat padding-box;
+    position: absolute;
+    top: 28px;
+    left: 29%;
+}

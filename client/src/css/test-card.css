@@ -1,0 +1,98 @@
+.mock-featured-main-container-tests .mock-test-card {
+    width: 17em;
+    padding: 10px;
+    background: transparent linear-gradient(180deg, #e0ebf9, #fff 54%, #fff) 0 0 no-repeat padding-box;
+    box-shadow: 0 10px 30px rgba(95, 141, 196, .2);
+    border-radius: 5px;
+    color: #707070;
+    margin: 0 auto 30px;
+}
+
+.mock-test-card-top {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.mock-test-card-top>img {
+    height: 25px;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.mock-test-card-top .top-bar .share-button {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.mock-test-card-top .top-bar .share-button>img {
+    width: 20px;
+    height: 20px;
+    margin: 8px;
+}
+
+.mock-test-card-image {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.mock-test-card-image>img {
+    height: 80px;
+    width: 70%;
+}
+
+.mock-test-card--heading {
+    text-align: center;
+    color: #3969ad;
+    font-weight: 500;
+    flex-grow: 1;
+    font-size: 18px;
+}
+
+.mock-test-card--middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mock-test-card--middle>div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+
+.mock-test-card--middle>div p:first-child {
+    margin-top: 20px;
+    color: #707070;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.mock-test-card--middle>div p:last-child {
+    font-size: 11px;
+    color: #707070;
+}
+
+.mock-test-card--bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.mock-test-card--bottom button {
+    background: #22559c;
+    box-shadow: 0 3px 6px rgba(95, 141, 196, .2);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 11px 33.7px;
+    font-size: 16px;
+    color: #fff;
+    margin: 10px 0;
+    text-decoration: none;
+    border: none;
+}

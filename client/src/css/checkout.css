@@ -1,0 +1,228 @@
+.checkout-main-container {
+    padding: 0 10% 120px;
+    background-color: #f7f7f7;
+}
+
+.checkout-header {
+    margin: 0 20%;
+    background-color: #f7f7f7;
+    display: flex;
+    padding: 24px;
+    align-items: flex-start;
+    color: rgba(0, 0, 0, 0.87);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    /* background-color: #fff; */
+}
+
+
+.checkout-multiStep-box {
+    flex: 1;
+    position: relative;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.checkout-box-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.checkout-box-container>span:first-child {
+    display: flex;
+    flex-shrink: 0;
+    padding-right: 0;
+}
+
+.checkout-box-container>span:last-child {
+    width: 100%;
+    color: #424242;
+    font-size: 0.9rem;
+    margin-top: 16px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.checkout-horizontal {
+    top: 12px;
+    left: calc(-50% + 20px);
+    right: calc(50% + 20px);
+    position: absolute;
+}
+
+.checkout-horizontal>span {
+    border-top-width: 3px;
+    border-top-style: solid;
+    display: block;
+    border-color: #bdbdbd;
+}
+
+.Checkout_cart-price-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Checkout_cart-price-container .left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.Checkout_cart-price-container .right {
+    width: 55%;
+}
+
+.Checkout_cart-price-container .checkout-card-main {
+    padding: 12px;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #424242;
+}
+
+.checkout-card-main {
+    font-size: 1rem;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 0.35em;
+    font-weight: 600;
+}
+
+.checkout-card-main hr,
+.priceDetail-container hr {
+    border: none;
+    height: 1px;
+    margin: 0;
+    flex-shrink: 0;
+    background-color: rgba(0, 0, 0, 0.12);
+    margin: 12px 0 !important;
+}
+
+.checkout-card-main .cardItem {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.checkout-card-main .cardItem>img {
+    height: 220px;
+    border-radius: 6px;
+}
+
+.checkout-card-main .card-course-description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.checkout-card-main .card-course-description>h6 {
+    font-weight: 600;
+    font-size: 18px;
+    color: rgb(247, 128, 119);
+    margin-bottom: 0.35em;
+}
+
+.checkout-card-main .card-course-description>a {
+    font-weight: 600;
+    color: #424242;
+    letter-spacing: .5px;
+    font-size: 20px;
+}
+
+.checkout-card-main .card-course-description>p {
+    font-size: 14px;
+    color: #858585;
+    margin-bottom: 0.35em;
+}
+
+.priceDetail-container {
+    position: sticky;
+    top: 85px;
+    padding: 12px;
+    margin-left: 16px;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #424242;
+}
+
+.priceDetail-container>p:first-child {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.priceDetail-container .subtotal-container,
+.priceDetail-container .total-container {
+    width: calc(100% + 16px);
+    margin: -8px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.priceDetail-container .subtotal-container .left,
+.priceDetail-container .total-container .left,
+.priceDetail-container .subtotal-container .right,
+.priceDetail-container .total-container .right {
+    padding: 8px;
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+}
+
+.priceDetail-container .subtotal-container .left>p,
+.priceDetail-container .total-container .left>p {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 0.35em;
+}
+
+.priceDetail-container .subtotal-container .right>p,
+.priceDetail-container .total-container .right>p {
+    font-weight: 600;
+    margin-bottom: 0.35em;
+    text-align: right;
+    line-height: 1.5;
+}
+
+.priceDetail-container>p:last-of-type {
+    margin-bottom: 0.35em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #f78077;
+    cursor: pointer;
+    margin-top: 8px !important;
+}
+
+.priceDetail-container>button {
+    margin: 12px 0;
+    width: 100%;
+    color: #fff;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    padding: 6px 16px;
+    font-size: 0.875rem;
+    min-width: 64px;
+    box-sizing: border-box;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background-color: rgb(247, 128, 119);
+    border: 0;
+    cursor: pointer;
+    display: inline-flex;
+    outline: 0;
+    position: relative;
+    align-items: center;
+    user-select: none;
+    border-radius: 0;
+    vertical-align: middle;
+    justify-content: center;
+    text-decoration: none;
+}

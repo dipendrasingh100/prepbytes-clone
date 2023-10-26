@@ -1,0 +1,115 @@
+.get-callback {
+    background: #f7f7ff;
+    min-height: 50px;
+}
+
+.callback-main {
+    max-width: 985px;
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.callback-main-container {
+    background: #f8f7fd;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0 3px 35px rgba(0, 0, 0, .1607843137254902);
+    padding: 40px 20px 50px;
+}
+
+.callback-main-container .left {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.callback-main-container .left .left--heading {
+    color: #424242;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.callback-main-container .left .left--subheading {
+    color: #858585;
+    font-size: 16px;
+    width: 70%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.callback-main-container .left .left--image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.callback-main-container .left .left--image>img {
+    height: 100%;
+    width: 90%;
+}
+
+.callback-main-container .right {
+    width: 40%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.callback-main-container .right input,
+.callback-main-container .right textarea {
+    width: 95%;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #f5f2ff;
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+}
+
+.callback-main-container .right input {
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    outline: none;
+    transition: .3s;
+    margin: 8px 0 20px;
+}
+
+
+.callback-main-container .right textarea {
+    resize: vertical;
+    margin-top: 10px;
+    height: 200px;
+    border-image: none;
+    border-radius: 6px 6px 6px 6px;
+    border: 1px solid #d4d4d4;
+    border-style: none solid solid none;
+    border-width: medium 1px 1px medium;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .12);
+    color: #555;
+    transition: background-color .2s ease 0s;
+}
+
+
+.callback-main-container .right textarea:focus {
+    outline: none;
+}
+
+.callback-main-container .right button {
+    margin-top: 30px;
+    width: 95%;
+    padding: 12px;
+    background: #f78077;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.callback-main-container .right button:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .1607843137254902);
+}

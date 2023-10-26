@@ -4,7 +4,8 @@ const connectDatabase = require("./db/connection")
 
 const cors = require("cors")
 const userRouter = require("./routes/userRoute")
-
+const errorMiddleware = require("./middleware/error")
+const mockRouter = require("./routes/mockRoutes")
 const app = express()
 
 app.use(express.json())
@@ -28,3 +29,6 @@ const startDB = async () => {
 startDB()
 
 app.use("/api/auth", userRouter)
+app.use("/api/mock", mockRouter)
+
+app.use(errorMiddleware)

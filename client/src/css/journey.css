@@ -1,0 +1,97 @@
+.home-journey {
+    background: #f8fafa;
+    min-height: 50px;
+}
+
+.home-journey-container {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+}
+
+.home-journey-container .left {
+    width: 40%;
+}
+
+
+.home-journey-container .left--heading {
+    color: #3e4041;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.left-tile-container {
+    margin-left: 30px;
+}
+
+.left-tile-container .left-tile {
+    background: #fff 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 25px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    width: 420px;
+    margin: 30px 0;
+}
+
+.left-tile-container img {
+    margin-left: -60px;
+}
+
+.left-tile-container .tile-text {
+    margin-left: 20px;
+    padding: 20px 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 80%;
+}
+
+.home-journey-container .left-tile-container-text {
+    font-size: 18px;
+    color: #858585;
+    margin-bottom: 20px;
+}
+
+.home-journey-container .left-tile-container-text>span {
+    color: #424242;
+    font-weight: 500;
+}
+
+.home-journey-container .left-tile-container-btn {
+    background: #00a5ec;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    padding: 13px 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.home-journey-container .left-tile-container-btn:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .16);
+}
+
+.home-journey-container .right-box{
+    display: flex;
+    padding: 0 20px;
+}
+
+.right-box-left{
+    align-items: center;
+}
+
+.right-box img{
+    height: 100%;
+    width: 100%;
+}
+
+.right-box-right .bottom{
+    background-image: url("../assets/images/dotted-bg.svg");
+    background-repeat: no-repeat;
+    background-position: bottom right -25px;
+}
