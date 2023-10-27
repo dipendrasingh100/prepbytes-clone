@@ -25,19 +25,25 @@
     padding-bottom: 29px;
 }
 
-.mock-featured-list {
+.mock-featured-list,
+.mock-practice-list {
     max-width: 1280px;
     margin: 0 auto;
     padding-top: 50px;
 }
 
+.mock-practice-list {
+    margin-bottom: 80px;
+}
 
-.mock-featured-main>p {
+.mock-featured-main>p,
+.mock-practice-main>p {
     color: #22559c;
     font-size: 28px;
 }
 
-.mock-featured-main-container--heading {
+.mock-featured-main-container--heading,
+.mock-practice-main-container--heading {
     text-align: center;
     color: #ffa000;
     text-transform: uppercase;
@@ -47,7 +53,8 @@
     margin: 15px 0 40px;
 }
 
-.mock-featured-main-container--heading::before {
+.mock-featured-main-container--heading::before,
+.mock-practice-main-container--heading::before {
     content: "";
     position: absolute;
     background-color: #5f8dc4;
@@ -59,7 +66,8 @@
     top: 0;
 }
 
-.mock-featured-main-container--heading::after {
+.mock-featured-main-container--heading::after,
+.mock-practice-main-container--heading::after {
     content: "";
     position: absolute;
     background-color: #5f8dc4;
@@ -70,7 +78,8 @@
     top: 0;
 }
 
-.mock-featured-main-container-tests{
+.mock-featured-main-container-tests,
+.mock-practice-main-container-tests {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

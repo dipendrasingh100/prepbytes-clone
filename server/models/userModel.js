@@ -32,6 +32,10 @@ const userSchema = new Schema({
         type: Number,
         required: [true, "Passing Year is Required"]
     },
+    courses: {
+        type: [Schema.Types.ObjectId],
+        ref: "Course"
+    },
     createdAt: {
         type: Date,
         default: Date.now,

@@ -1,6 +1,7 @@
 import React from 'react'
 import "../css/video-tut.css"
 import VideoLib from "../assets/images/video_lib_illustration.png"
+import VideoCard from '../components/VideoCard'
 
 const VideoTut = () => {
   return (
@@ -12,7 +13,17 @@ const VideoTut = () => {
             <p className="left-bottom">Increase your knowledge with PrepBytes free videos. PrepBytes video library is a repository of more than 250 videos containing videos on Competitive Programming , Language Fundamentals - C, C++, Java, Data Structures and Algorithms, Aptitude, Operating System, Interview Questions and much more all at one place. </p>
           </div>
           <img src={VideoLib} alt="video_lib_illustration" />
-          {/* <iframe src="https://drive.google.com/file/d/1SSSx6kqUjVrx6RedIVgwDg2wv75ezc6Z/preview" title='recording'></iframe> */}
+        </div>
+      </div>
+      <div className="videoLib-main">
+        <h2>Categories</h2>
+        <div className="videoLib-main-cards">
+          <VideoCard title="Competitive Programming" desc="Competitive Programming questions solved by top rated coders" video_url="https://www.youtube.com/embed/1fBfxj6p728?si=ndr4XirB5EWB0UiH"/>
+          <VideoCard title="Interview Preparation" desc="Commonly asked coding interview questions solved step by step" video_url="https://www.youtube.com/embed/0m8fFrckGLo?si=paslxHa8mvvKP048"/>
+          <VideoCard title="Data Structures and Algorithms" desc="Basic concepts of Data Structures and Algo and Ds/Algo problems solved" video_url="https://www.youtube.com/embed/2TwFkngcc0g?si=V4pi5k1eUEFgkF_h"/>
+          <VideoCard title="Aptitude" desc="Aptitude practice questions and puzzles to boost your thinking brain" video_url="https://www.youtube.com/embed/2TwFkngcc0g?si=V4pi5k1eUEFgkF_h"/>
+          <VideoCard title="C++ Programming" desc="Deep dive into the fundamentals of C++ programming" video_url="https://www.youtube.com/embed/M_DJ6wUh1xw?si=OChIfKO3yNrcoi1f"/>
+          <VideoCard title="Operating System" desc="Learn in-depth concepts of Operating Systems easily." video_url="https://www.youtube.com/embed/uLxVAmO6i_k?si=4V_QTXt33kAQObLE"/>
         </div>
       </div>
     </div>

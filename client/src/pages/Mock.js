@@ -3,11 +3,14 @@ import "../css/mock.css"
 import TestCard from '../components/TestCard'
 import { useDispatch, useSelector } from 'react-redux'
 import { getTests } from '../app/mockSlice'
+import TopicTestCard from '../components/TopicTestCard'
+import { handleLink } from '../utils/helperFuction'
 
 const Mock = () => {
     const dispatch = useDispatch()
     const { tests, error } = useSelector(state => state.mock)
     useEffect(() => {
+        handleLink()
         dispatch(getTests())
     }, [dispatch])
 
@@ -32,9 +35,30 @@ const Mock = () => {
                             Past Mock Tests
                         </p>
                         <div className="mock-featured-main-container-tests">
-                            {tests && tests.map(test => (
-                                <TestCard key={test._id} title={test.title} thumb={test.thumbnail} date={test.date} participants={test.participants} duration={test.duration} />
-                            ))
+                            {tests && tests.map(test => {
+                                if (test?.category !== "topic") {
+                                    return <TestCard key={test._id} title={test.title} thumb={test.thumbnail} date={test.date} participants={test.participants} duration={test.duration} />
+                                }
+                            })
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="mock-practice-list">
+                <div className="mock-practice-main">
+                    <p>Practice Tests</p>
+                    <div className="mock-practice-main-container">
+                        <p className="mock-practice-main-container--heading">
+                            Topic Wise
+                        </p>
+                        <div className="mock-practice-main-container-tests">
+                            {tests && tests.map(test => {
+                                if (test?.category === "topic") {
+                                    return <TopicTestCard key={test._id} title={test.title} thumb={test.thumbnail} />
+                                }
+                            })
                             }
                         </div>
                     </div>

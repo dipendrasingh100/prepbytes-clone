@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "../css/checkout.css"
 import { BsFill1CircleFill, BsFill2CircleFill, BsFill3CircleFill } from "react-icons/bs"
 import { AiFillCheckCircle } from "react-icons/ai"
 import CheckoutItemCard from './CheckoutItemCard'
-import MasterCP from "../assets/images/master_competitive_pgm.png"
+import PaypalCheckoutButton from './PaypalCheckoutButton'
+import { useSelector } from 'react-redux'
+import { handleLink } from '../utils/helperFuction'
 
 const Checkout = () => {
+    const [success, setSuccess] = useState(false)
+    const { cartItem } = useSelector(state => state.cart)
+    useEffect(()=>{
+        handleLink()
+    },[])
+
     return (
         <div className='checkout-main-container'>
             <div className="checkout-header">
@@ -52,7 +60,7 @@ const Checkout = () => {
                     <div className="checkout-card-main">
                         <p>My Cart</p>
                         <hr />
-                        <CheckoutItemCard image={MasterCP} title='MASTER COMPETITIVE PROGRAMMING' price={25000} description='No more difficulty in solving difficult problems. Turn yourself from an average coder to a top-rated coder' />
+                        <CheckoutItemCard image={cartItem?.image} title={cartItem?.title} price={cartItem?.price} description={cartItem?.description} />
                     </div>
                 </div>
                 <div className="right">
@@ -64,7 +72,7 @@ const Checkout = () => {
                                 <p>Sub Total:</p>
                             </div>
                             <div className="right">
-                                <p>Rs. 25000.00</p>
+                                <p>Rs. {cartItem?.price}</p>
                             </div>
                         </div>
                         <p>Apply Coupon</p>
@@ -74,10 +82,13 @@ const Checkout = () => {
                                 <p>Total Amount:</p>
                             </div>
                             <div className="right">
-                                <p>Rs. 25000.00</p>
+                                <p>Rs. {cartItem?.price}</p>
                             </div>
                         </div>
-                        <button>Make Payment</button>
+                        {success ? <button>Purchased</button> : <>
+                            <button>Make Payment</button>
+                            <PaypalCheckoutButton setSuccess={setSuccess} />
+                        </>}
                     </div>
                 </div>
             </div>

@@ -2,8 +2,17 @@ import React from 'react'
 import Info from "../assets/icons/info.svg"
 import Share from "../assets/icons/share.svg"
 import "../css/test-card.css"
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../app/cartSlice'
+import { useNavigate } from 'react-router-dom'
 
 const TestCard = ({ title, thumb, date, participants, duration }) => {
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const handleClick = () => {
+        dispatch(addToCart({ title, image: thumb, price: 50, description: "" }))
+        navigate(`/checkout/${title}`)
+    }
     return (
         <div className='mock-test-card'>
             <div className="mock-test-card-top">
@@ -38,7 +47,7 @@ const TestCard = ({ title, thumb, date, participants, duration }) => {
             </div>
 
             <div className="mock-test-card--bottom">
-                <button>Pay & Register</button>
+                <button onClick={handleClick}>Pay & Register</button>
             </div>
         </div>
     )

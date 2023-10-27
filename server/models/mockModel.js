@@ -8,6 +8,7 @@ const mockSchema = new Schema({
     thumbnail: {
         type: String
     },
+    category: String,
     date: String,
     participants: Number,
     duration: Number

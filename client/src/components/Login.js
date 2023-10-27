@@ -14,7 +14,8 @@ const Login = () => {
   const emailRef = useRef()
   const passRef = useRef()
   const [inputdata, setInput] = useState({ email: "", password: "" })
-  const [errordata, setError] = useState({ email: "", password: "", other: "" })
+  const [errordata, setError] = useState({ email: "", password: "" })
+  const [otherErr, setOtherErr] = useState("")
 
   const { isLoading, isAuthenticated, error } = useSelector(state => state.user)
 
@@ -32,12 +33,12 @@ const Login = () => {
   useEffect(() => {
     handleLink()
     if (error) {
-      setError({ ...errordata, other: error })
+      setOtherErr(error)
     }
     if (isAuthenticated) {
       navigate(from)
     }
-  }, [dispatch, error, from, isAuthenticated, navigate, errordata])
+  }, [error, from, isAuthenticated, navigate])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -74,7 +75,7 @@ const Login = () => {
             <button type="submit" className='form-signin-btn'>SIGN IN</button>
             <button className='form-otp-btn'>Login Via OTP</button>
             <div>
-              <p className='form-status'>{errordata.other}</p>
+              <p className='form-status'>{otherErr}</p>
             </div>
           </form>
         </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import NotFound from "./pages/NotFound"
@@ -14,8 +14,17 @@ import CompetitiveCourse from './pages/CompetitiveCourse'
 import FullStackCourse from './pages/FullStackCourse'
 import Elevation from './pages/Elevation'
 import Checkout from './components/Checkout'
+import { useDispatch, useSelector } from 'react-redux'
+import { loadUser } from './app/userSlice'
 
 const App = () => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(loadUser())
+  }, [dispatch])
+
+
   return (
     <>
       <Routes>
@@ -38,9 +47,9 @@ const App = () => {
               <Route path='/master-competitive-programming' element={<CompetitiveCourse />} />
               <Route path='/online-full-stack-developer-mern-certification-program' element={<FullStackCourse />} />
               <Route path='/elevation-academy' element={<Elevation />} />
-              <Route path='/checkout/:course' element={<Checkout />} />
 
               <Route element={<RequireAuth />} >
+                <Route path='/checkout/:course' element={<Checkout />} />
                 {/* <Route path='' element={ } /> */}
               </Route>
               <Route path='*' element={<NotFound />} />

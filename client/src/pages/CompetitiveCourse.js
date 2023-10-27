@@ -7,8 +7,15 @@ import MCPUspTwo from "../assets/images/mcp-usp-two.webp"
 import MCPUspThree from "../assets/images/mcp-usp-three.webp"
 import MCPUspFour from "../assets/images/mcp-usp-four.webp"
 import CourseHighlightCard from '../components/CourseHighlightCard'
+import { useNavigate } from 'react-router-dom'
+
 
 const CompetitiveCourse = () => {
+    const navigate = useNavigate()
+
+    const handleEnroll = () => {
+        navigate('/checkout/master-competitive-programming')
+    }
     return (
         <div className='course-page-container'>
             <div className="course-page-header">
@@ -23,7 +30,7 @@ const CompetitiveCourse = () => {
                             <h6>Master Competitive Programming Fom Zero And Become A Top-Rated Coder
                                 <p> Under The Guidance Of Top Competitive Programmers</p>
                             </h6>
-                            <button className="enroll-btn">Enroll Now</button>
+                            <button className="enroll-btn" onClick={handleEnroll}>Enroll Now</button>
                         </div>
                     </div>
                     <div className="right">

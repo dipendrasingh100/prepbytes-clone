@@ -102,7 +102,7 @@ const createNewPassword = asyncHandler(async (req, res, next) => {
     }
 
     if (password !== confirmPassword) {
-        return next(new ErrorHandler("Password doesn't match"), 500)
+        return next(new ErrorHandler("Password doesn't match", 500))
     }
 
     user.password = await bcrypt.hash(password, 10)
@@ -114,4 +114,17 @@ const createNewPassword = asyncHandler(async (req, res, next) => {
 
 })
 
-module.exports = { register, login, resetpassword, createNewPassword }
+
+//Get user details
+const getUserDetails = asyncHandler(async (req, res, next) => {
+    // const user = await User.findById(req.id);
+    const user = await User.findById(req.id);
+
+    res.status(200).json({
+        success: true,
+        user,
+    });
+});
+
+
+module.exports = { register, login, resetpassword, createNewPassword, getUserDetails }

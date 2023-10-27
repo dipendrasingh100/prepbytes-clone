@@ -6,6 +6,8 @@ const cors = require("cors")
 const userRouter = require("./routes/userRoute")
 const errorMiddleware = require("./middleware/error")
 const mockRouter = require("./routes/mockRoutes")
+const orderRouter = require("./routes/orderRoutes")
+const courseRouter = require("./routes/courseRoutes")
 const app = express()
 
 app.use(express.json())
@@ -30,5 +32,7 @@ startDB()
 
 app.use("/api/auth", userRouter)
 app.use("/api/mock", mockRouter)
+app.use("/api/v2", orderRouter)
+app.use("/api/course", courseRouter)
 
 app.use(errorMiddleware)

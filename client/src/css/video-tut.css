@@ -34,3 +34,45 @@
     padding-right: 10px;
     color: #424242;
 }
+
+.videoLib-main{
+    margin: 0 auto;
+    max-width: 1251px;
+}
+
+.videoLib-main>h2{
+    font-size: 18px;
+    font-weight: 600;
+    color: #22559c;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.videoLib-main>h2::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    left: -20px;
+    top: 80%;
+    height: 2px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #22559c;
+    margin: 11px auto;
+}
+
+.videoLib-main-cards{
+    max-width: 1251px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
