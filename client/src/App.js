@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import NotFound from "./pages/NotFound"
@@ -17,9 +17,12 @@ import Checkout from './components/Checkout'
 import { useDispatch } from 'react-redux'
 import { loadUser } from './app/userSlice'
 import Dashboard from './pages/Dashboard'
+import Header3 from './components/Header3'
 
 const App = () => {
   const dispatch = useDispatch()
+  const [navClose, setNavClose] = useState(false)
+
 
   useEffect(() => {
     dispatch(loadUser())
@@ -33,7 +36,16 @@ const App = () => {
           <>
             <Header2 />
             <ForgotPassword />
+            <Footer />
           </>} />
+
+        <Route element={<RequireAuth />} >
+          <Route path='/dashboard' element={
+            <>
+              <Header3 navClose={navClose} setNavClose={setNavClose} />
+              <Dashboard navClose={navClose} setNavClose={setNavClose} />
+            </>} />
+        </Route>
 
         <Route path='*' element={
           <>
@@ -48,18 +60,16 @@ const App = () => {
               <Route path='/master-competitive-programming' element={<CompetitiveCourse />} />
               <Route path='/online-full-stack-developer-mern-certification-program' element={<FullStackCourse />} />
               <Route path='/elevation-academy' element={<Elevation />} />
-
               <Route element={<RequireAuth />} >
-                <Route path='/dashboard' element={<Dashboard />} />
                 <Route path='/checkout/:course' element={<Checkout />} />
                 {/* <Route path='' element={ } /> */}
               </Route>
               <Route path='*' element={<NotFound />} />
             </Routes>
+            <Footer />
           </>
         } />
       </Routes>
-      <Footer />
     </>
   )
 }

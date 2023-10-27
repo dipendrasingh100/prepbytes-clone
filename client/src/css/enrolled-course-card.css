@@ -1,0 +1,74 @@
+.EnrolledCourseCard__container{
+    margin: 15px;
+    box-shadow: 0 4px 0.9em #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 282px;
+    height: 348px;
+    background: transparent linear-gradient(180deg,#fff,#fff 24%,#fff 38%,hsla(0,0%,100%,.03137254901960784)) 0 0 no-repeat padding-box;
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    padding: 0 12px;
+    width: 304px;
+    height: 372px;
+}
+
+.EnrolledCourseCard__container>img{
+    position: absolute;
+}
+
+.EnrolledCourseCard__container .thumb-container{
+    margin-top: 2rem;
+    display: flex;
+    padding: 8px 0;
+    width: 100%;
+}
+
+.EnrolledCourseCard__container>div:first-child>h3{
+    letter-spacing: .38px;
+    color: #424242;
+    opacity: 1;
+    width: 235px;
+    height: 75px;
+    text-align: left;
+    font: normal normal 700 22px/32px Inter;
+    width: 260px;
+}
+
+.EnrolledCourseCard__btn-container{
+    min-height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.EnrolledCourseCard__btn-container button{
+    color: #fff;
+    padding: 6px 30px;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+    background: #00a5ec 0 0 no-repeat padding-box;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    text-align: center;
+    width: 234px;
+    height: 38px;
+    width: 260px;
+    z-index: 1;
+    margin-bottom: .5rem;
+    font: normal normal 700 14px/17px Inter;
+}
+
+.EnrolledCourseCard__container .rating{
+    position: absolute;
+    top: 8px;
+    left: 18px;
+    font-size: 14px;
+}
