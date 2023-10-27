@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "../css/checkout.css"
 import { BsFill1CircleFill, BsFill2CircleFill, BsFill3CircleFill } from "react-icons/bs"
-import { AiFillCheckCircle } from "react-icons/ai"
+// import { AiFillCheckCircle } from "react-icons/ai"
 import CheckoutItemCard from './CheckoutItemCard'
 import PaypalCheckoutButton from './PaypalCheckoutButton'
 import { useSelector } from 'react-redux'

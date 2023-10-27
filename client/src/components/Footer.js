@@ -12,18 +12,10 @@ const Footer = () => {
                         FOLLOW US
                     </div>
                     <div className="footer-social-icons">
-                        <a href="" target='_blank'>
-                            <AiFillFacebook color='#000' />
-                        </a>
-                        <a href="" target='_blank'>
-                            <AiFillInstagram color='#000' />
-                        </a>
-                        <a href="" target='_blank'>
-                            <AiFillLinkedin color='#000' />
-                        </a>
-                        <a href="" target='_blank'>
-                            <AiFillYoutube color='#000' />
-                        </a>
+                        <AiFillFacebook color='#000' />
+                        <AiFillInstagram color='#000' />
+                        <AiFillLinkedin color='#000' />
+                        <AiFillYoutube color='#000' />
                     </div>
                     <div className="footer-contact">
                         <div className="footer-title">
@@ -50,17 +42,13 @@ const Footer = () => {
                     <div className="footer-title">
                         LATEST ARTICLES
                         <ul type='none' className='article-items'>
-                            <a href="">
-                                <li>CPP Interview Questions</li>
-                            </a>
+                            <li>CPP Interview Questions</li>
                         </ul>
                     </div>
                     <div className="footer-title">
                         POPULAR ARTICLES
                         <ul type='none' className='article-items'>
-                            <a href="">
-                                <li>GIT Interview Questions and Answers</li>
-                            </a>
+                            <li>GIT Interview Questions and Answers</li>
                         </ul>
 
                     </div>
@@ -80,9 +68,9 @@ const Footer = () => {
             <div className="footer-bottom">
                 <div>Copyright©2023</div>
                 <div className='policy-cont'>
-                    <a href="">Privacy Policy</a>
-                    <a href="">Refund Policy</a>
-                    <a href="">Terms of Use</a>
+                    <span>Privacy Policy</span>
+                    <span>Refund Policy</span>
+                    <span>Terms of Use</span>
                 </div>
             </div>
         </footer >

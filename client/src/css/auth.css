@@ -203,8 +203,10 @@ input[type=checkbox] {
     width: 12px;
 }
 
-.form-t-c>span a {
+.form-t-c>span span {
     color: #4b8ce8;
+    cursor: pointer;
+    margin-left: 5px;
 }
 
 .form-t-c>span {

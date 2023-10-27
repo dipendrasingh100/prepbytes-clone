@@ -32,7 +32,7 @@ const HomeJourney = () => {
                             <span>PrepBytes Elevation Academy</span>
                             -  4 months Full Stack Program with Job Guarantee
                         </p>
-                        <a href="" className='left-tile-container-btn'>Know more</a>
+                        <button className='left-tile-container-btn'>Know more</button>
                     </div>
                     <div className="right">
                         <div className="right-box">

@@ -10,7 +10,7 @@ const Register = () => {
   const [inputdata, setInput] = useState({ name: "", mobile: "", email: "", password: "", college: "", passing_year: "" })
   const [errordata, setError] = useState({ email: "", password: "", other: "" })
 
-  const { isLoading, isAuthenticated, error } = useSelector(state => state.user)
+  const { isAuthenticated, error } = useSelector(state => state.user)
   const checkBox = useRef()
 
   const dispatch = useDispatch()
@@ -143,7 +143,7 @@ const Register = () => {
               <input type="checkbox" name="terms-and-conditions" defaultChecked ref={checkBox} />
               <span>
                 I agree to the
-                <a href=""> terms and conditions</a>
+                <span> terms and conditions</span>
               </span>
             </div>
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import "../css/header.css"
 import { Link } from 'react-router-dom'
 import logo from "../assets/logoPrepBytes.svg"
@@ -9,7 +9,7 @@ import dashboardImg from "../assets/icons/dashboard.svg"
 
 const Header = () => {
     const [click, setClick] = useState(false)
-    const { isLoading, isAuthenticated, error, user } = useSelector(state => state.user)
+    const { isAuthenticated, user } = useSelector(state => state.user)
     const [options, setOptions] = useState(false)
 
     const handleLogout = () => {
@@ -78,12 +78,12 @@ const Header = () => {
                                 </div>
                                 <div className="options" style={{ display: options ? 'block' : "none" }}>
                                     <div className="options-items">
-                                        <a href="" className="options-item-box" >
+                                        <Link to='/dashboard' className="options-item-box" >
                                             <div>
                                                 <img src={dashboardImg} alt="dashboard" />
                                                 <p className="options-item-text">My Dashboard</p>
                                             </div>
-                                        </a>
+                                        </Link>
 
                                         <div className="options-item-box logout" onClick={handleLogout}>
                                             <p >Logout</p>

@@ -20,7 +20,7 @@ const CompetitiveCourse = () => {
         <div className='course-page-container'>
             <div className="course-page-header">
                 <div className="course-page-header--fixed-btn-container">
-                    <img src={ApplyNow} alt="Apply now Image" />
+                    <img src={ApplyNow} alt="Apply now Img" />
                     <div>Enroll Now</div>
                 </div>
                 <div className="course-page-header-container">

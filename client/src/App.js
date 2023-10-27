@@ -14,8 +14,9 @@ import CompetitiveCourse from './pages/CompetitiveCourse'
 import FullStackCourse from './pages/FullStackCourse'
 import Elevation from './pages/Elevation'
 import Checkout from './components/Checkout'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { loadUser } from './app/userSlice'
+import Dashboard from './pages/Dashboard'
 
 const App = () => {
   const dispatch = useDispatch()
@@ -49,6 +50,7 @@ const App = () => {
               <Route path='/elevation-academy' element={<Elevation />} />
 
               <Route element={<RequireAuth />} >
+                <Route path='/dashboard' element={<Dashboard />} />
                 <Route path='/checkout/:course' element={<Checkout />} />
                 {/* <Route path='' element={ } /> */}
               </Route>

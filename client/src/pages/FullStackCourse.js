@@ -19,9 +19,7 @@ const FullStackCourse = () => {
                             Full Stack Web Development Certification Course - Accredited by Nasscom, approved by the Government India.
                         </p>
                         <div className="left-buttons">
-                            <a href="">
-                                <button>Download Syllabus</button>
-                            </a>
+                            <button>Download Syllabus</button>
                         </div>
                     </div>
 

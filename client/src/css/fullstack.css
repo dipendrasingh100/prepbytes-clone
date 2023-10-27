@@ -46,11 +46,9 @@
 
 .fullStack-main>.left>.left-buttons {
     display: flex;
-}
-
-.fullStack-main>.left>.left-buttons>a {
     width: 45%;
 }
+
 
 .fullStack-main>.left>.left-buttons button {
     background: transparent;

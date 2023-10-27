@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { verifyEmail } from '../utils/email_pass_verify'
 // import Loader from './Loader'
 import { useDispatch, useSelector } from 'react-redux'
-import { clearError, forgotPassword, clearMessage } from '../app/forgotPasswordSlice'
+import { forgotPassword } from '../app/forgotPasswordSlice'
 // import { ToastContainer, toast } from 'react-toastify'
 // import { toastOptions } from '../utils/constants'
 import "../css/forget_password.css"
@@ -13,7 +13,7 @@ const ForgotPassword = () => {
     const [err, setErr] = useState("")
     const dispatch = useDispatch()
 
-    const { isLoading, message, error } = useSelector(state => state.forgotPassword)
+    const { message, error } = useSelector(state => state.forgotPassword)
 
     const handleChange = (e) => {
         const { value } = e.target

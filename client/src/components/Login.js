@@ -17,7 +17,7 @@ const Login = () => {
   const [errordata, setError] = useState({ email: "", password: "" })
   const [otherErr, setOtherErr] = useState("")
 
-  const { isLoading, isAuthenticated, error } = useSelector(state => state.user)
+  const { isAuthenticated, error } = useSelector(state => state.user)
 
   const from = location.state?.from?.pathname || "/"
   const handleSubmit = (e) => {

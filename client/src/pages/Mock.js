@@ -8,7 +8,7 @@ import { handleLink } from '../utils/helperFuction'
 
 const Mock = () => {
     const dispatch = useDispatch()
-    const { tests, error } = useSelector(state => state.mock)
+    const { tests } = useSelector(state => state.mock)
     useEffect(() => {
         handleLink()
         dispatch(getTests())
@@ -35,10 +35,12 @@ const Mock = () => {
                             Past Mock Tests
                         </p>
                         <div className="mock-featured-main-container-tests">
-                            {tests && tests.map(test => {
+                            {
+                            tests && tests.map(test => {
                                 if (test?.category !== "topic") {
                                     return <TestCard key={test._id} title={test.title} thumb={test.thumbnail} date={test.date} participants={test.participants} duration={test.duration} />
                                 }
+                                return null;
                             })
                             }
                         </div>
@@ -58,6 +60,7 @@ const Mock = () => {
                                 if (test?.category === "topic") {
                                     return <TopicTestCard key={test._id} title={test.title} thumb={test.thumbnail} />
                                 }
+                                return null;
                             })
                             }
                         </div>

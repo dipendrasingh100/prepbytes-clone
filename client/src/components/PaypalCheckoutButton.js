@@ -1,11 +1,11 @@
 import React from 'react'
 import { PayPalButtons } from '@paypal/react-paypal-js'
 import server from '../host';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 
 
 const PaypalCheckoutButton = ({ setSuccess }) => {
-    const { user } = useSelector(state => state.user)
+    // const { user } = useSelector(state => state.user)
 
     const createOrder = async (data, actions) => {
         // Order is created on the server and the order id is returned
