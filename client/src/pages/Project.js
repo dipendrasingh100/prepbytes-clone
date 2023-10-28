@@ -5,7 +5,6 @@ import server from '../host'
 import { IoIosHome } from "react-icons/io"
 import ProjectLeft from '../components/ProjectLeft'
 import ProjectRight from '../components/projectRight'
-import html from "../assets/images/html.png"
 
 
 const Project = () => {
