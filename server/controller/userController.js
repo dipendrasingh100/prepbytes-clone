@@ -127,4 +127,61 @@ const getUserDetails = asyncHandler(async (req, res, next) => {
 });
 
 
-module.exports = { register, login, resetpassword, createNewPassword, getUserDetails }
+const addToMyCourse = asyncHandler(async (req, res, next) => {
+    const { courseId } = req.body
+    // const user = await User.findById(req.id);
+    const user = await User.findOne({
+        _id: req.id,
+        courses: { $in: [courseId] }
+    });
+
+    if (user) {
+        return next(new ErrorHandler("You are already enrolled in this course", 403))
+    }
+    await User.updateOne({ _id: req.id }, { $push: { courses: courseId } })
+
+    const updatedUser = await User.findById(req.id).populate("courses");
+    // user.courses.push()
+    // await user.save()
+    res.status(200).json({
+        success: true,
+        user: updatedUser
+    });
+});
+
+const addToMyTest = asyncHandler(async (req, res, next) => {
+    const { testId } = req.body
+    // const user = await User.findById(req.id);
+    const user = await User.findOne({
+        _id: req.id,
+        tests: { $in: [testId] }
+    });
+
+    if (user) {
+        return next(new ErrorHandler("You are already enrolled in this test", 403))
+    }
+    await User.updateOne({ _id: req.id }, { $push: { tests: testId } })
+
+    const updatedUser = await User.findById(req.id).populate("tests");
+    // user.courses.push()
+    // await user.save()
+    res.status(200).json({
+        success: true,
+        user: updatedUser
+    });
+});
+
+
+const getMyCourses = asyncHandler(async (req, res, next) => {
+    const user = await User.findById(req.id).populate([
+        { path: "courses" },
+        { path: "tests" }
+    ]);
+
+    res.status(200).json({
+        success: true,
+        user
+    });
+});
+
+module.exports = { register, login, resetpassword, createNewPassword, getUserDetails, addToMyCourse, getMyCourses, addToMyTest }

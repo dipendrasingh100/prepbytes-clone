@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../css/dashboard.css"
 import { GiGraduateCap } from 'react-icons/gi'
 import EnrolledCourseCard from '../components/EnrolledCourseCard'
+import { useDispatch, useSelector } from 'react-redux'
+import { getMyCourses } from '../app/userSlice'
 
 const Dashboard = ({ navClose, setNavClose }) => {
+  const { user } = useSelector(state => state.user)
+
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(getMyCourses())
+  }, [dispatch])
   return (
     <div className='dashboard-section-container'>
       <div className="dashboard-side-nav">
@@ -28,12 +36,17 @@ const Dashboard = ({ navClose, setNavClose }) => {
           <div className="mycourses-section-top">
             <div className="mycourses-section-top-view">
               <div className="mycourses-section-tav-active">
-                Courses
+                Courses/Tests({user?.courses.length + user?.tests.length})
               </div>
             </div>
           </div>
           <div className="mycourses-section_courses-container">
-            <EnrolledCourseCard />
+            {user && user?.courses.map((item, index) => (
+              < EnrolledCourseCard key={index} title={item?.title} thumb={item?.thumb} description={item?.description} />
+            ))}
+            {user && user?.tests.map((item, index) => (
+              < EnrolledCourseCard key={index} title={item?.title} thumb={item?.thumbnail} description={item?.description} />
+            ))}
           </div>
         </div>
         <div className="dashboard-section-right">

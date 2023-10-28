@@ -36,6 +36,10 @@ const userSchema = new Schema({
         type: [Schema.Types.ObjectId],
         ref: "Course"
     },
+    tests: {
+        type: [Schema.Types.ObjectId],
+        ref: "Mock"
+    },
     createdAt: {
         type: Date,
         default: Date.now,

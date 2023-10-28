@@ -36,12 +36,12 @@ const Mock = () => {
                         </p>
                         <div className="mock-featured-main-container-tests">
                             {
-                            tests && tests.map(test => {
-                                if (test?.category !== "topic") {
-                                    return <TestCard key={test._id} title={test.title} thumb={test.thumbnail} date={test.date} participants={test.participants} duration={test.duration} />
-                                }
-                                return null;
-                            })
+                                tests && tests.map(test => {
+                                    if (test?.category !== "topic") {
+                                        return <TestCard key={test._id} id={test._id} title={test.title} thumb={test.thumbnail} date={test.date} participants={test.participants} duration={test.duration} />
+                                    }
+                                    return null;
+                                })
                             }
                         </div>
                     </div>

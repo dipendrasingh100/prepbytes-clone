@@ -6,11 +6,11 @@ import { useDispatch } from 'react-redux'
 import { addToCart } from '../app/cartSlice'
 import { useNavigate } from 'react-router-dom'
 
-const TestCard = ({ title, thumb, date, participants, duration }) => {
+const TestCard = ({ id, title, thumb, date, participants, duration }) => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const handleClick = () => {
-        dispatch(addToCart({ title, image: thumb, price: 50, description: "" }))
+        dispatch(addToCart({ id, title, image: thumb, price: 50, description: "", type: "test" }))
         localStorage.setItem("from", "/mock-tests")
         navigate(`/checkout/${title}`)
     }

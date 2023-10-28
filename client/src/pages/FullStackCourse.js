@@ -22,7 +22,7 @@ const FullStackCourse = () => {
 
 
     const handleEnroll = () => {
-        dispatch(addToCart({ title: course.title, image: course.thumb, price: course.price, description: course.description }))
+        dispatch(addToCart({ title: course.title, image: course.thumb, price: course.price, description: course.description, type: "course" }))
         localStorage.setItem("from", "/online-full-stack-developer-mern-certification-program")
         navigate(`/checkout/${course.title}`)
     }

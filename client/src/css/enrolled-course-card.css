@@ -26,8 +26,14 @@
 .EnrolledCourseCard__container .thumb-container{
     margin-top: 2rem;
     display: flex;
+    justify-content: center;
     padding: 8px 0;
     width: 100%;
+}
+
+.EnrolledCourseCard__container .thumb-container>img{
+    width: 150px;
+    height: 150px;
 }
 
 .EnrolledCourseCard__container>div:first-child>h3{

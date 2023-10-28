@@ -1,11 +1,16 @@
 import React from 'react'
 import { PayPalButtons } from '@paypal/react-paypal-js'
 import server from '../host';
+import { useDispatch, useSelector } from 'react-redux';
+import { buyCourse, buyTest } from '../app/userSlice';
 // import { useSelector } from 'react-redux';
 
 
 const PaypalCheckoutButton = ({ setSuccess }) => {
-    // const { user } = useSelector(state => state.user)
+    const { course } = useSelector(state => state.course)
+    const { cartItem } = useSelector(state => state.cart)
+
+    const dispatch = useDispatch()
 
     const createOrder = async (data, actions) => {
         // Order is created on the server and the order id is returned
@@ -97,6 +102,11 @@ const PaypalCheckoutButton = ({ setSuccess }) => {
                 //     JSON.stringify(orderData, null, 2),
                 // );
                 setSuccess(true)
+                if (cartItem?.type === "test") {
+                    dispatch(buyTest(cartItem?.id))
+                } else {
+                    dispatch(buyCourse(course?._id))
+                }
             }
         } catch (error) {
             console.error(error);

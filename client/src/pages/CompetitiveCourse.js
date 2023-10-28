@@ -26,7 +26,7 @@ const CompetitiveCourse = () => {
 
 
     const handleEnroll = () => {
-        dispatch(addToCart({ title: course.title, image: course.thumb, price: course.price, description: course.description }))
+        dispatch(addToCart({ title: course.title, image: course.thumb, price: course.price, description: course.description , type:"course"}))
         localStorage.setItem("from", "/master-competitive-programming")
         navigate(`/checkout/${course.title}`)
     }
