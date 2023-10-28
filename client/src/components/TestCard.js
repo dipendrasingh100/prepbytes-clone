@@ -11,6 +11,7 @@ const TestCard = ({ title, thumb, date, participants, duration }) => {
     const dispatch = useDispatch()
     const handleClick = () => {
         dispatch(addToCart({ title, image: thumb, price: 50, description: "" }))
+        localStorage.setItem("from", "/mock-tests")
         navigate(`/checkout/${title}`)
     }
     return (

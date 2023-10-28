@@ -6,13 +6,19 @@ import CheckoutItemCard from './CheckoutItemCard'
 import PaypalCheckoutButton from './PaypalCheckoutButton'
 import { useSelector } from 'react-redux'
 import { handleLink } from '../utils/helperFuction'
+import { useNavigate } from 'react-router-dom'
 
 const Checkout = () => {
+    const navigate = useNavigate()
     const [success, setSuccess] = useState(false)
     const { cartItem } = useSelector(state => state.cart)
-    useEffect(()=>{
+    const from = localStorage.getItem("from") || "/"
+    useEffect(() => {
         handleLink()
-    },[])
+        if (!cartItem) {
+            navigate(from)
+        }
+    }, [cartItem, from, navigate])
 
     return (
         <div className='checkout-main-container'>

@@ -1,0 +1,212 @@
+.project_page {
+    overflow-x: hidden;
+}
+
+.project_page-header {
+    position: relative;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #fff;
+}
+
+.data-bg,
+.bg-image {
+    background-image: url("../assets/images/project-header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+}
+
+.flex-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    /* width: 100%; */
+    width: 1170px;
+}
+
+.flex-block-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.middlebar-items {
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.site-branding {
+    margin-right: 20px;
+    width: 400px;
+}
+
+.site-branding p:first-child {
+    color: #072448;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 auto 10px;
+}
+
+
+.site-branding p:last-child {
+    margin: 0 auto;
+    position: relative;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.project-navigation {
+    background-color: #fff;
+    border-bottom: 1px solid #dedede;
+}
+
+.project-navigation-area {
+    position: relative;
+}
+
+.project-navigation-area ul {
+    display: inline-block;
+    margin: 0 130px 0 50px;
+    padding: 0;
+    list-style: none;
+    vertical-align: top;
+    margin-left: 0;
+}
+
+.project-navigation-area ul li {
+    position: relative;
+    display: block;
+    float: left;
+    position: relative;
+    display: block;
+    padding: 0 10px;
+}
+
+.project-navigation-area ul li>a {
+    color: #072448;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    letter-spacing: 1px;
+    font-weight: 500;
+
+}
+
+.project-navigation-area ul>li:first-child>a{
+    margin-top: 2px;
+}
+
+.project-navigation-area ul>li:first-child>a>svg {
+    width: 20px;
+    height: 20px;
+}
+
+.project_content{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1170px;
+}
+
+.project_content .project_content_area{
+    float: left;
+    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-right: 15px;
+    width: 66.66%;
+}
+
+.project_content_area>h1{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.project_content_area>a{
+    color: tomato;
+}
+
+.project_content_area>a>svg{
+    margin-left: 5px;
+}
+
+.project-entry-content>p{
+    margin-bottom: 1.25em;
+}
+
+.project-entry-content>p>img{
+    height: auto;
+    max-width: 100%;
+    border-style: none;
+    vertical-align: top;
+}
+
+.project_content>aside{
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+    min-height: 1px;
+    padding-left: 15px;
+    width: 33.33%;
+    float: right;
+    padding-top: 40px;
+}
+
+.project_content>aside>div{
+    padding-top: 0px;
+    padding-bottom: 1px;
+    position: static;
+    transform: none;
+}
+
+.project-topics{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 20px rgba(45, 45, 45, 0.05);
+    padding: 20px;
+    background-color: #fff;
+}
+
+
+.project-topics >h2{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 auto 30px;
+    padding-bottom: 15px;
+    position: relative;
+    text-transform: capitalize;
+    border-bottom: 1px solid #dedede;
+}
+
+.project-topics>ul{
+    list-style: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.project-topics .topic{
+    margin: 0 0 15px;
+    display: block;
+    border-bottom: 1px dashed #dedede;
+    padding-bottom: 10px;
+}

@@ -18,6 +18,7 @@ import { useDispatch } from 'react-redux'
 import { loadUser } from './app/userSlice'
 import Dashboard from './pages/Dashboard'
 import Header3 from './components/Header3'
+import Project from './pages/Project'
 
 const App = () => {
   const dispatch = useDispatch()
@@ -47,6 +48,8 @@ const App = () => {
             </>} />
         </Route>
 
+        <Route path='/project/:name' element={<Project />} />
+
         <Route path='*' element={
           <>
             <Header />
@@ -61,9 +64,9 @@ const App = () => {
               <Route path='/online-full-stack-developer-mern-certification-program' element={<FullStackCourse />} />
               <Route path='/elevation-academy' element={<Elevation />} />
               <Route element={<RequireAuth />} >
-                <Route path='/checkout/:course' element={<Checkout />} />
-                {/* <Route path='' element={ } /> */}
+                <Route path='/checkout/:course' element={<Checkout />} />F
               </Route>
+
               <Route path='*' element={<NotFound />} />
             </Routes>
             <Footer />

@@ -4,6 +4,6 @@ const courseRouter = require("express").Router()
 
 
 courseRouter.post("/add", createCourse)
-courseRouter.post("/getcourse", getCourse)
+courseRouter.get("/getcourse", getCourse)
 
 module.exports = courseRouter

@@ -59,12 +59,12 @@ const Header = () => {
                                     <AiFillCaretDown className='svg-icon' />
                                 </div>
                                 <div className="dropdown-content project">
-                                    <Link>HTML</Link>
-                                    <Link>CSS</Link>
-                                    <Link>JavaScript</Link>
-                                    <Link>React JS</Link>
-                                    <Link>Node JS</Link>
-                                    <Link>MongoDB</Link>
+                                    <Link to='/project/html'>HTML</Link>
+                                    <Link to='/project/css'>CSS</Link>
+                                    <Link to='/project/javascript'>JavaScript</Link>
+                                    <Link to='/project/reactjs'>React JS</Link>
+                                    <Link to='/project/nodejs'>Node JS</Link>
+                                    <Link to='/project/mongodb'>MongoDB</Link>
                                 </div>
                             </div>
                             {isAuthenticated && <menu className='user' onClick={() => setOptions(!options)}>

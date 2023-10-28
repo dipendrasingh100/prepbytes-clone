@@ -1,10 +1,32 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PartnerLogo from "../assets/images/header-logo.svg"
 import "../css/fullstack.css"
+import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { handleLink } from '../utils/helperFuction'
+import { getCourse } from '../app/courseSlice'
+import { addToCart } from '../app/cartSlice'
 
 const FullStackCourse = () => {
 
     const [check, setCheck] = useState(0)
+
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const { course } = useSelector(state => state.course)
+
+    useEffect(() => {
+        handleLink()
+        dispatch(getCourse("full stack mern developer"))
+    }, [dispatch])
+
+
+    const handleEnroll = () => {
+        dispatch(addToCart({ title: course.title, image: course.thumb, price: course.price, description: course.description }))
+        localStorage.setItem("from", "/online-full-stack-developer-mern-certification-program")
+        navigate(`/checkout/${course.title}`)
+    }
+
     return (
         <div className='fullStack-page-container'>
             <div className="fullStack-header">
@@ -72,7 +94,7 @@ const FullStackCourse = () => {
                             </div>
                             <div className="batchDetails-atc-container">
                                 <div className="enroll-now-btn">
-                                    <button>Enroll Now</button>
+                                    <button onClick={handleEnroll}>Enroll Now</button>
                                 </div>
                                 <div className="try-free">
                                     <button>Try for free</button>

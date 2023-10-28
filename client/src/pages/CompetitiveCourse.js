@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../css/competitive-course.css"
 import ApplyNow from "../assets/icons/ApplyNow.svg"
 import MCPImg from "../assets/images/mcp-header-image.webp"
@@ -8,13 +8,27 @@ import MCPUspThree from "../assets/images/mcp-usp-three.webp"
 import MCPUspFour from "../assets/images/mcp-usp-four.webp"
 import CourseHighlightCard from '../components/CourseHighlightCard'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { addToCart } from '../app/cartSlice'
+import { handleLink } from '../utils/helperFuction'
+import { getCourse } from '../app/courseSlice'
 
 
 const CompetitiveCourse = () => {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const { course } = useSelector(state => state.course)
+
+    useEffect(() => {
+        handleLink()
+        dispatch(getCourse("master competitive programming"))
+    }, [dispatch])
+
 
     const handleEnroll = () => {
-        navigate('/checkout/master-competitive-programming')
+        dispatch(addToCart({ title: course.title, image: course.thumb, price: course.price, description: course.description }))
+        localStorage.setItem("from", "/master-competitive-programming")
+        navigate(`/checkout/${course.title}`)
     }
     return (
         <div className='course-page-container'>

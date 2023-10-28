@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler")
 const Course = require("../models/courseModel")
+const ErrorHandler = require("../utils/errorHandler")
 
 const createCourse = asyncHandler(async (req, res, next) => {
     const courseDetails = req.body
@@ -11,10 +12,10 @@ const createCourse = asyncHandler(async (req, res, next) => {
 })
 
 const getCourse = asyncHandler(async (req, res, next) => {
-    const { course } = req.body
+    const { c } = req.query
 
-    const courseDetails = await Course.find({ "title": course })
-    if(!course){
+    const courseDetails = await Course.findOne({ "title": c })
+    if(!courseDetails){
         return next(new ErrorHandler("Course Not found", 404))
     }
     res.status(200).json({
