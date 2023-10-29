@@ -57,11 +57,11 @@ const Footer = () => {
                     <div className="footer-title">
                         QUICK LINKS
                     </div>
-                    <Link to='/' className='footer-links'>Mock Tests</Link>
-                    <Link to='/' className='footer-links'>Placement Programs</Link>
-                    <Link to='/' className='footer-links'>Coding Courses</Link>
+                    <Link to='/mock-tests' className='footer-links'>Mock Tests</Link>
+                    <Link to='/elevation-academy' className='footer-links'>Placement Programs</Link>
+                    <Link to='/master-competitive-programming' className='footer-links'>Coding Courses</Link>
                     <Link to='/' className='footer-links'>About us</Link>
-                    <Link to='/' className='footer-links'>Project</Link>
+                    <Link to='/project/html' className='footer-links'>Project</Link>
                 </div>
             </div>
             <hr />
