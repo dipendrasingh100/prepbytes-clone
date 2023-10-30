@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import Register from './Register'
 import Login from "./Login"
 import leftImg from "../assets/images/illustrated.webp"
-import Minilogo from "../assets/images/logo.webp"
+import Minilogo from "../assets/logo.webp"
 import students from "../assets/images/students.webp"
 import college from "../assets/images/college.webp"
 import learning from "../assets/images/learning.webp"

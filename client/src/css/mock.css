@@ -1,3 +1,7 @@
+.loading {
+    height: 80vh !important;
+}
+
 .mock-header {
     background: transparent linear-gradient(180deg, #3969ad, #1d3557) 0 0 no-repeat padding-box;
     min-height: 200px;

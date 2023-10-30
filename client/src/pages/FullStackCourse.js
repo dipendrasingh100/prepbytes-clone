@@ -32,6 +32,7 @@ import Neo from "../assets/images/fs/neo.svg"
 import StackCompaniesCard from '../components/fs/StackCompaniesCard'
 import Statistics from '../components/fs/Statistics'
 import StackMentorCard from '../components/fs/StackMentorCard'
+import Loader from '../components/Loader'
 
 const FullStackCourse = () => {
 
@@ -39,7 +40,7 @@ const FullStackCourse = () => {
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const { course } = useSelector(state => state.course)
+    const { course, isLoading } = useSelector(state => state.course)
 
     useEffect(() => {
         handleLink()
@@ -54,156 +55,159 @@ const FullStackCourse = () => {
     }
 
     return (
-        <div className='fullStack-page-container'>
-            <div className="fullStack-header">
-                <section className="fullStack-main">
-                    <div className="left">
-                        <p>Partner with</p>
-                        <div className="left-img-container">
-                            <img src={PartnerLogo} alt="partner logo" />
-                        </div>
-                        <h1>Learn Full Stack Web Development & Build Real World Projects using React & Node</h1>
-                        <p className="left-text">
-                            Full Stack Web Development Certification Course - Accredited by Nasscom, approved by the Government India.
-                        </p>
-                        <div className="left-buttons">
-                            <button>Download Syllabus</button>
-                        </div>
-                    </div>
-
-                    <div className="right">
-                        <div className="fullStack-header-right-box">
-                            <p className='box--heading'>Next Batch starts: 1st May, 2023</p>
-                            <p className='box--text'>Limited seats available</p>
-                        </div>
-                        <div className="fullStack-header-right-box">
-                            <p className='box--heading'>Program Duration:  4 - 5 months</p>
-                            <p className='box--text'>15-20 hours/week</p>
-                        </div>
-                        <div className="fullStack-header-right-box">
-                            <p className='box--heading'>Learning Format</p>
-                            <p className='box--text'>Recorded Lectures + Online Live Classes</p>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <div className="fullStack-batchDetails">
-                <div className="batchDetails-container">
-                    <h4>SELECT BATCH</h4>
-                    <div className="batchDetails-section">
-                        <div className="batchDetails-date-container">
-                            <div className="batch-container">
-                                <label className="batch-label">
-                                    <input type="radio" value={0} checked={check === 0} onChange={() => setCheck(0)} />
-                                    <span className='batch-text-container'>
-                                        <h5>1st May</h5>
-                                        <p>Enrolment Started</p>
-                                    </span>
-                                </label>
+        <>
+            {isLoading ? <Loader /> :
+                <div className='fullStack-page-container'>
+                    <div className="fullStack-header">
+                        <section className="fullStack-main">
+                            <div className="left">
+                                <p>Partner with</p>
+                                <div className="left-img-container">
+                                    <img src={PartnerLogo} alt="partner logo" />
+                                </div>
+                                <h1>Learn Full Stack Web Development & Build Real World Projects using React & Node</h1>
+                                <p className="left-text">
+                                    Full Stack Web Development Certification Course - Accredited by Nasscom, approved by the Government India.
+                                </p>
+                                <div className="left-buttons">
+                                    <button>Download Syllabus</button>
+                                </div>
                             </div>
-                            <div className="batchDetails-date-container">
-                                <div className="batch-container">
-                                    <label className="batch-label">
-                                        <input type="radio" value={1} checked={check === 1} onChange={() => setCheck(1)} />
-                                        <span className='batch-text-container'>
-                                            <h5>15th May</h5>
-                                            <p>Enrolment Started</p>
-                                        </span>
-                                    </label>
+
+                            <div className="right">
+                                <div className="fullStack-header-right-box">
+                                    <p className='box--heading'>Next Batch starts: 1st May, 2023</p>
+                                    <p className='box--text'>Limited seats available</p>
+                                </div>
+                                <div className="fullStack-header-right-box">
+                                    <p className='box--heading'>Program Duration:  4 - 5 months</p>
+                                    <p className='box--text'>15-20 hours/week</p>
+                                </div>
+                                <div className="fullStack-header-right-box">
+                                    <p className='box--heading'>Learning Format</p>
+                                    <p className='box--text'>Recorded Lectures + Online Live Classes</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div className="fullStack-batchDetails">
+                        <div className="batchDetails-container">
+                            <h4>SELECT BATCH</h4>
+                            <div className="batchDetails-section">
+                                <div className="batchDetails-date-container">
+                                    <div className="batch-container">
+                                        <label className="batch-label">
+                                            <input type="radio" value={0} checked={check === 0} onChange={() => setCheck(0)} />
+                                            <span className='batch-text-container'>
+                                                <h5>1st May</h5>
+                                                <p>Enrolment Started</p>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div className="batchDetails-date-container">
+                                        <div className="batch-container">
+                                            <label className="batch-label">
+                                                <input type="radio" value={1} checked={check === 1} onChange={() => setCheck(1)} />
+                                                <span className='batch-text-container'>
+                                                    <h5>15th May</h5>
+                                                    <p>Enrolment Started</p>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="batchDetails-enroll-container">
+                                    <div className="batchDetails-actprice">
+                                        ₹30000
+                                    </div>
+                                    <div className="batchDetails-atc-container">
+                                        <div className="enroll-now-btn">
+                                            <button onClick={handleEnroll}>Enroll Now</button>
+                                        </div>
+                                        <div className="try-free">
+                                            <button>Try for free</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="batchDetails-enroll-container">
-                            <div className="batchDetails-actprice">
-                                ₹30000
+                    </div>
+
+                    <div className="StackTools">
+                        <div className="StackTools__left">
+                            <div className="StackTools__left--heading">
+                                Languages & Tools you will learn
                             </div>
-                            <div className="batchDetails-atc-container">
-                                <div className="enroll-now-btn">
-                                    <button onClick={handleEnroll}>Enroll Now</button>
-                                </div>
-                                <div className="try-free">
-                                    <button>Try for free</button>
+                            <p className="StackTools__left--text">
+                                Start learning web development from basics of HTML, CSS, Javascript.Master latest technologies like React, Node, Express. Get hands on Github, MongoDB, Google Analytics, Facebook Analytics
+                            </p>
+                        </div>
+                        <div className="StackTools__right">
+                            <img src={ToolsImg} alt="ToolsImg" />
+                        </div>
+                    </div>
+
+                    <div className="StackJourney">
+                        <div className="StackJourney__container">
+                            <p className="StackJourney__container--heading">
+                                How will your journey look like?
+                            </p>
+                            <p className="StackJourney__container--text">
+                                We have designed a unique program where you can learn Full stack & experience being a developer sitting at your home
+                            </p>
+                        </div>
+                        <StackJourney />
+                    </div>
+
+                    <div className="StackProgram">
+                        <div className="StackProgram__main">
+                            <div className="StackProgram__main__left">
+                                <img src={Girl} alt="girlimage" />
+                            </div>
+                            <div className="StackProgram__main__right">
+                                <p className="StackProgram__main__right--heading">
+                                    What you will be after finishing the program?
+                                </p>
+                                <div className="StackProgram__main__right--box">
+                                    <AfterFinishing image={Certificate} text='Certified Full stack Developer' />
+                                    <AfterFinishing image={Realtime} text='Experience of Real world work' />
+                                    <AfterFinishing image={Excellent} text='Ready to crack any web developer interview' />
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div className="StackTools">
-                <div className="StackTools__left">
-                    <div className="StackTools__left--heading">
-                        Languages & Tools you will learn
-                    </div>
-                    <p className="StackTools__left--text">
-                        Start learning web development from basics of HTML, CSS, Javascript.Master latest technologies like React, Node, Express. Get hands on Github, MongoDB, Google Analytics, Facebook Analytics
-                    </p>
-                </div>
-                <div className="StackTools__right">
-                    <img src={ToolsImg} alt="ToolsImg" />
-                </div>
-            </div>
+                    <div className="StackCompanies">
+                        <div className="StackCompanies__main">
+                            <p className="StackCompanies__main--heading">
+                                Companies that hire for the roles
+                            </p>
 
-            <div className="StackJourney">
-                <div className="StackJourney__container">
-                    <p className="StackJourney__container--heading">
-                        How will your journey look like?
-                    </p>
-                    <p className="StackJourney__container--text">
-                        We have designed a unique program where you can learn Full stack & experience being a developer sitting at your home
-                    </p>
-                </div>
-                <StackJourney />
-            </div>
-
-            <div className="StackProgram">
-                <div className="StackProgram__main">
-                    <div className="StackProgram__main__left">
-                        <img src={Girl} alt="girlimage" />
-                    </div>
-                    <div className="StackProgram__main__right">
-                        <p className="StackProgram__main__right--heading">
-                            What you will be after finishing the program?
-                        </p>
-                        <div className="StackProgram__main__right--box">
-                            <AfterFinishing image={Certificate} text='Certified Full stack Developer' />
-                            <AfterFinishing image={Realtime} text='Experience of Real world work' />
-                            <AfterFinishing image={Excellent} text='Ready to crack any web developer interview' />
+                            <div className="StackCompanies__main--container">
+                                <StackCompaniesCard title='Tech Giants' text='Tech giants keep hiring for web developement roles. You will often find opening for Frontend, Backend or Full Stack Developers. Strong knowledge and good projects will help you grab an oppurtunity here' images={[Paypal, Oracle, Walmart, Goldman, JP]} />
+                                <StackCompaniesCard title='Established Startups' text='All the well known start ups have their website and they use latest tech to build them. Experience with web development and good problem skill is all you need to crack these companies.' images={[MMT, Byjus, Paytm, Delhivery, Flipkart]} />
+                                <StackCompaniesCard title='Growing Startups' text='Almost Every Startup have a web app or mobile app. Hundreds of growing startups or Early-stage startup keep looking for interns or web developers to help them convert their idea to reality. ' images={[Fab, Mygate, Wedme, Styleme, Neo]} />
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div className="StackCompanies">
-                <div className="StackCompanies__main">
-                    <p className="StackCompanies__main--heading">
-                        Companies that hire for the roles
-                    </p>
+                    <Statistics />
 
-                    <div className="StackCompanies__main--container">
-                        <StackCompaniesCard title='Tech Giants' text='Tech giants keep hiring for web developement roles. You will often find opening for Frontend, Backend or Full Stack Developers. Strong knowledge and good projects will help you grab an oppurtunity here' images={[Paypal, Oracle, Walmart, Goldman, JP]} />
-                        <StackCompaniesCard title='Established Startups' text='All the well known start ups have their website and they use latest tech to build them. Experience with web development and good problem skill is all you need to crack these companies.' images={[MMT, Byjus, Paytm, Delhivery, Flipkart]} />
-                        <StackCompaniesCard title='Growing Startups' text='Almost Every Startup have a web app or mobile app. Hundreds of growing startups or Early-stage startup keep looking for interns or web developers to help them convert their idea to reality. ' images={[Fab, Mygate, Wedme, Styleme, Neo]} />
+                    <div className="StackMentors">
+                        <div className="StackMentors__main">
+                            <p className="StackMentors__main--heading">
+                                Mentors & Instructors
+                            </p>
+                            <div className="StackMentors__main--container">
+                                <StackMentorCard image='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/full-stack-course/Mamta.webp' title='Mamta Kumari, Co-Founder PrepBytes' text='Mamta has over 5 years of experience working in tech giants like Amazon and Samsung and has mentored more than 2000 students to help them enhance their coding skills. She is all set to guide you in your journey of web development' />
+                                <StackMentorCard image='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/full-stack-course/mentor_rahul.webp' title='Rahul Dutta, Software Developer OLA' text='Rahul has work experience of over 3 years and is currently working as Software Developer in OLA. Rahul has mentored many students in past and is excited about sharing his knowledge here.' />
+                                <StackMentorCard image='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/full-stack-course/mentor_harshita.webp' title='Harshita Sharma, Product Engineer AskSid.ai ' text='Harshita is currently working in AskSid.ai and has worked in MindTree as Full Stack Developer. Apart from Web Development she also have experience in developing Voice-based Chatbots using Dialogflow from Google.' />
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <Statistics />
-
-            <div className="StackMentors">
-                <div className="StackMentors__main">
-                    <p className="StackMentors__main--heading">
-                        Mentors & Instructors
-                    </p>
-                    <div className="StackMentors__main--container">
-                        <StackMentorCard image='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/full-stack-course/Mamta.webp' title='Mamta Kumari, Co-Founder PrepBytes' text='Mamta has over 5 years of experience working in tech giants like Amazon and Samsung and has mentored more than 2000 students to help them enhance their coding skills. She is all set to guide you in your journey of web development'/>
-                        <StackMentorCard image='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/full-stack-course/mentor_rahul.webp' title='Rahul Dutta, Software Developer OLA' text='Rahul has work experience of over 3 years and is currently working as Software Developer in OLA. Rahul has mentored many students in past and is excited about sharing his knowledge here.'/>
-                        <StackMentorCard image='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/full-stack-course/mentor_harshita.webp' title='Harshita Sharma, Product Engineer AskSid.ai ' text='Harshita is currently working in AskSid.ai and has worked in MindTree as Full Stack Developer. Apart from Web Development she also have experience in developing Voice-based Chatbots using Dialogflow from Google.'/>
-                    </div>
-                </div>
-            </div>
-        </div>
+                </div>}
+        </>
     )
 }
 
