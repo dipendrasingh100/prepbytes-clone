@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../css/video-tut.css"
 import VideoLib from "../assets/images/video_lib_illustration.png"
 import VideoCard from '../components/VideoCard'
+import { handleLink } from '../utils/helperFuction'
 
 const VideoTut = () => {
+  useEffect(()=>{
+    handleLink()
+  },[])
   return (
     <div>
       <div className="videoLib-header">
@@ -21,7 +25,7 @@ const VideoTut = () => {
           <VideoCard title="Competitive Programming" desc="Competitive Programming questions solved by top rated coders" video_url="https://www.youtube.com/embed/1fBfxj6p728?si=ndr4XirB5EWB0UiH"/>
           <VideoCard title="Interview Preparation" desc="Commonly asked coding interview questions solved step by step" video_url="https://www.youtube.com/embed/0m8fFrckGLo?si=paslxHa8mvvKP048"/>
           <VideoCard title="Data Structures and Algorithms" desc="Basic concepts of Data Structures and Algo and Ds/Algo problems solved" video_url="https://www.youtube.com/embed/2TwFkngcc0g?si=V4pi5k1eUEFgkF_h"/>
-          <VideoCard title="Aptitude" desc="Aptitude practice questions and puzzles to boost your thinking brain" video_url="https://www.youtube.com/embed/2TwFkngcc0g?si=V4pi5k1eUEFgkF_h"/>
+          <VideoCard title="Aptitude" desc="Aptitude practice questions and puzzles to boost your thinking brain" video_url="https://www.youtube.com/embed/xu-U0hkKE6A?si=7WwKaCGQvLq_YOWu"/>
           <VideoCard title="C++ Programming" desc="Deep dive into the fundamentals of C++ programming" video_url="https://www.youtube.com/embed/M_DJ6wUh1xw?si=OChIfKO3yNrcoi1f"/>
           <VideoCard title="Operating System" desc="Learn in-depth concepts of Operating Systems easily." video_url="https://www.youtube.com/embed/uLxVAmO6i_k?si=4V_QTXt33kAQObLE"/>
         </div>

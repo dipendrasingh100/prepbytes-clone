@@ -61,7 +61,7 @@ const Mock = () => {
                                 <div className="mock-practice-main-container-tests">
                                     {tests && tests.map(test => {
                                         if (test?.category === "topic") {
-                                            return <TopicTestCard key={test._id} title={test.title} thumb={test.thumbnail} />
+                                            return <TopicTestCard key={test._id} id={test._id} title={test.title} thumb={test.thumbnail} />
                                         }
                                         return null;
                                     })

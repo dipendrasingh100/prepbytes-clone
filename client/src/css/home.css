@@ -69,7 +69,7 @@
     width: 100%;
 }
 
-.home-achievement{
+.home-achievement {
     max-width: 1082px;
     margin: 0 auto;
     padding-top: 30px;
@@ -77,13 +77,108 @@
     min-height: 100px;
 }
 
-.home-achievement .achievement-container{
+.home-achievement .achievement-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.achievement-container>img{
+.achievement-container>img {
     height: 57px;
     margin: 10px;
+}
+
+@media screen and (max-width:1024px) {
+
+    .home-top-left--heading,
+    .home-top-left--subheading {
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .home-top-main {
+        flex-direction: column-reverse;
+        background: none;
+        background-color: #fff;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+    }
+
+
+    .home-top-left {
+        width: 80%;
+        padding: 0;
+        margin: 20px;
+    }
+
+    /* .home-top-left--heading,
+    .home-top-left--subheading {
+        font-size: 35px;
+    } */
+
+    .home-top-left--last {
+        font-size: 21px;
+    }
+
+    .home-top-left-button button{
+        font-size: 21px;
+    }
+
+    .home-top-right {
+        background: none;
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+
+    .home-top-left--heading,
+    .home-top-left--subheading {
+        font-size: 21px;
+    }
+
+    .home-top-main {
+        padding: 0;
+    }
+
+    .home-top-left {
+        width: 90%;
+        padding: 0 20px;
+        margin: 20px 0;
+    }
+
+    .home-top-left--last {
+        font-size: 16px;
+    }
+
+    .home-top-left-button {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+    }
+
+    .home-top-left-button button {
+        margin-bottom: 20px;
+        width: 75%;
+        font-size: 16px;
+    }
+
+    .home-top-right {
+        height: 100%;
+        width: 100%;
+    }
+
+    .home-achievement {
+        padding: 10px;
+    }
+
+    .home-achievement .achievement-container {
+        width: 100%;
+    }
+
+    .achievement-container>img {
+        height: 40px !important;
+    }
 }

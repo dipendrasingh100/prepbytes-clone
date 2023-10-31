@@ -18,9 +18,9 @@ const Header = () => {
     }
 
     return (
-        <header className="header-container">
+        <header className="header-container main-header">
             <div className="header-logo-container">
-                <Link to="/">
+                <Link to="/" onClick={() => setClick(false)}>
                     <img src={logo} alt="logo" />
                 </Link>
             </div>
@@ -100,20 +100,44 @@ const Header = () => {
                         : <GiHamburgerMenu className='svg-icon' color='rgb(24, 107, 225)' onClick={() => setClick(true)} />
                     }
 
-                    <div className="narrow-sub-conatiner" style={{ display: `${click ? "block" : "none"}` }}>
+                    <div className="narrow-sub-conatiner main-header" style={{ display: `${click ? "block" : "none"}` }}>
                         <div className="narrow-navigations">
-                            <Link className='nav-link'>Mock Test</Link>
-                            <Link className='nav-link'>Video Tutorials</Link>
-                            <Link className='nav-link'>Master Competitive Programming</Link>
-                            <Link className='nav-link'>Full Stack Program</Link>
-                            <Link className='nav-link'>Elevation Academy</Link>
-                            <Link className='nav-link'>HTML</Link>
-                            <Link className='nav-link'>CSS</Link>
-                            <Link className='nav-link'>JavaScript</Link>
-                            <Link className='nav-link'>React JS</Link>
-                            <Link className='nav-link'>Node JS</Link>
-                            <Link className='nav-link'>MongoDB</Link>
-                            <Link className='nav-link-login'>Login/SignUp</Link>
+                            {isAuthenticated && <menu className='user header-mob' onClick={() => setOptions(!options)}>
+                                <div className="user_name">
+                                    <div className="group mob">
+                                        <div className="avtar-circle">
+                                            {user && user?.name[0].toUpperCase()}
+                                        </div>
+                                        <span className={click ? 'username' : ''}>Hi {user && user?.name.split(" ")[0]}</span>
+                                    </div>
+                                </div>
+                                <div className="options" style={{ display: 'block', position: "static" }}>
+                                    <div className="options-items">
+                                        <Link to='/dashboard' className="options-item-box" >
+                                            <div>
+                                                <img src={dashboardImg} alt="dashboard" />
+                                                <p className="options-item-text">My Dashboard</p>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </menu>}
+                            <Link className='nav-link' to='/mock-tests' onClick={() => setClick(false)}>Mock Test</Link>
+                            <Link className='nav-link' to='/preparation-videos' onClick={() => setClick(false)}>Video Tutorials</Link>
+                            <Link className='nav-link' to='/master-competitive-programming' onClick={() => setClick(false)}>Master Competitive Programming</Link>
+                            <Link className='nav-link' to='/online-full-stack-developer-mern-certification-program' onClick={() => setClick(false)}>Full Stack Program</Link>
+                            <Link className='nav-link' to='/elevation-academy' onClick={() => setClick(false)}>Elevation Academy</Link>
+                            <Link className='nav-link' to='/project/html' onClick={() => setClick(false)}>HTML</Link>
+                            <Link className='nav-link' to='/project/css' onClick={() => setClick(false)}>CSS</Link>
+                            <Link className='nav-link' to='/project/javascript' onClick={() => setClick(false)}>JavaScript</Link>
+                            <Link className='nav-link' to='/project/reactjs' onClick={() => setClick(false)}>React JS</Link>
+                            <Link className='nav-link' to='/project/nodejs' onClick={() => setClick(false)}>Node JS</Link>
+                            <Link className='nav-link' to='/project/mongodb' onClick={() => setClick(false)}>MongoDB</Link>
+                            {isAuthenticated ?
+                                <div className="options-item-box logout" onClick={handleLogout}>
+                                    <p >Logout</p>
+                                </div> :
+                                <Link className='nav-link-login' to='/login' onClick={() => setClick(false)}>Login/SignUp</Link>}
 
                         </div>
                     </div>

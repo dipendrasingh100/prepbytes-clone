@@ -35,6 +35,7 @@ const HomeJourney = () => {
                         <button className='left-tile-container-btn'>Know more</button>
                     </div>
                     <div className="right">
+                    <p className="right--heading">Are you an Experienced Professional willing to Switch?</p>
                         <div className="right-box">
                             <div className="right-box-left">
                                 <img src={Journey1} alt="journey1" />

@@ -88,3 +88,47 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+
+@media screen and (max-width:1024px) {
+    .mock-header-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .mock-header-top,
+    .mock-header-bottom {
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .mock-header-bottom {
+        width: 90%;
+    }
+
+    .mock-featured-main,
+    .mock-practice-main {
+        padding: 0 16px;
+    }
+
+    .mock-featured-main-container--heading::before,
+    .mock-practice-main-container--heading::before,
+    .mock-featured-main-container--heading::after,
+    .mock-practice-main-container--heading::after {
+        width: 32%;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    .mock-featured-main-container--heading::before,
+    .mock-practice-main-container--heading::before,
+    .mock-featured-main-container--heading::after,
+    .mock-practice-main-container--heading::after {
+        width: 18%;
+    }
+}

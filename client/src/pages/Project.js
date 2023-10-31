@@ -57,10 +57,10 @@ const Project = () => {
             </header>
 
             <div className="project_content">
-                {projectData && <ProjectRight topics={projectData?.topics} />}
-                {projectData && projectData?.projects.map((item, index) => (
+                <div className='project-content-main-area'>{projectData && projectData?.projects.map((item, index) => (
                     <ProjectLeft image={item.thumb} title={item.title} description={item.description} link={item.link} key={index} />
-                ))}
+                ))}</div>
+                {projectData && <ProjectRight topics={projectData?.topics} />}
             </div>
         </div>
     )

@@ -226,3 +226,29 @@
     justify-content: center;
     text-decoration: none;
 }
+
+
+@media screen and (max-width:900px) {
+    .checkout-header,
+    .priceDetail-container{
+        margin: unset;
+    }
+
+    .Checkout_cart-price-container{
+        flex-direction: column;
+    }
+
+    .Checkout_cart-price-container .right{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .checkout-main-container{
+        padding: 0 0 120px;
+    }
+
+    .Checkout_cart-price-container .checkout-card-main{
+        padding: 12px 24px;
+    }
+}

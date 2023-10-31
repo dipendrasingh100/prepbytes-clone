@@ -16,11 +16,16 @@
 }
 
 
-.home-journey-container .left--heading {
+.home-journey-container .left--heading,
+.home-journey-container .right--heading {
     color: #3e4041;
     font-size: 35px;
     font-weight: 600;
     margin-bottom: 25px;
+}
+
+.home-journey-container .right--heading {
+    display: none;
 }
 
 .left-tile-container {
@@ -76,22 +81,81 @@
     box-shadow: 0 3px 10px rgba(0, 0, 0, .16);
 }
 
-.home-journey-container .right-box{
+.home-journey-container .right-box {
     display: flex;
     padding: 0 20px;
 }
 
-.right-box-left{
+.right-box-left {
     align-items: center;
 }
 
-.right-box img{
+.home-journey-container .right-box img {
     height: 100%;
     width: 100%;
 }
 
-.right-box-right .bottom{
+.right-box-right .bottom {
     background-image: url("../assets/images/dotted-bg.svg");
     background-repeat: no-repeat;
     background-position: bottom right -25px;
+}
+
+@media screen and (max-width:1024px) {
+    .home-journey-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        flex-direction: column-reverse;
+    }
+
+    .home-journey-container .left {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .home-journey-container .left--heading {
+        display: none;
+    }
+
+    .home-journey-container .right--heading {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        color: #3e4041;
+        font-size: 35px;
+        font-weight: 600;
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    .home-journey-container .right-box {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .left-tile-container .left-tile{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .home-journey-container .left {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .home-journey-container .left {
+        width: 80%;
+    }
+
+    .home-journey-container .right--heading {
+        text-align: left;
+        font-size: 25px;
+    }
+
+    .left-tile-container .tile-text{
+        font-size: 16px;
+    }
 }

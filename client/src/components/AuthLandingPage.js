@@ -36,28 +36,28 @@ const AuthLandingPage = ({ page }) => {
                     </div>
                     <div className="left-achievements">
                         <img src={Minilogo} alt="logo" />
-                        <div className="achievement-container">
+                        <div className="achievement-container2">
                             <img src={students} alt="students" />
                             <div className="achievement-detail">
                                 <p>10K+</p>
                                 <p>Students Enrolled</p>
                             </div>
                         </div>
-                        <div className="achievement-container">
+                        <div className="achievement-container2">
                             <img src={college} alt="college" />
                             <div className="achievement-detail">
                                 <p>1000+</p>
                                 <p>React in Colleges</p>
                             </div>
                         </div>
-                        <div className="achievement-container">
+                        <div className="achievement-container2">
                             <img src={learning} alt="learning" />
                             <div className="achievement-detail">
                                 <p>10K+</p>
                                 <p>Hours of Learning</p>
                             </div>
                         </div>
-                        <div className="achievement-container">
+                        <div className="achievement-container2">
                             <img src={social} alt="social" />
                             <div className="achievement-detail">
                                 <p>150K+</p>

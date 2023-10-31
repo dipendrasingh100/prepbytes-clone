@@ -52,14 +52,14 @@
     margin-top: -35px;
 }
 
-.achievement-container {
+.achievement-container2 {
     margin: 18px 8px;
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
 }
 
-.achievement-container>img {
+.achievement-container2>img {
     width: auto !important;
     height: 50px !important;
 }
@@ -137,6 +137,11 @@
     flex-direction: column;
 }
 
+
+.form-data .form-status{
+    color: tomato;
+    margin-top: 10px;
+}
 
 .form-t-c {
     display: flex;
@@ -344,7 +349,7 @@ input[type=checkbox] {
         padding: 18px;
     }
 
-    .achievement-container {
+    .achievement-container2 {
         margin: 14px 8px;
     }
 
@@ -377,7 +382,7 @@ input[type=checkbox] {
         margin-top: 14px;
     }
 
-    .achievement-container {
+    .achievement-container2 {
         margin: 10px 0;
         width: 36%;
         display: flex;

@@ -225,11 +225,11 @@ span {
     cursor: pointer;
 }
 
-.batchDetails-atc-container> .try-free{
+.batchDetails-atc-container>.try-free {
     align-items: center;
 }
 
-.batchDetails-atc-container> .try-free>button{
+.batchDetails-atc-container>.try-free>button {
     background: #00a5ec 0 0 no-repeat padding-box;
     border-radius: 6px;
     border: none;
@@ -262,7 +262,7 @@ span {
 }
 
 .StackTools__left--heading {
-    color: rgba(10,45,71,.9294117647058824);
+    color: rgba(10, 45, 71, .9294117647058824);
     font-size: 28px;
     margin-bottom: 10px;
     text-align: center;
@@ -270,7 +270,7 @@ span {
 
 .StackTools__left--text {
     text-align: center;
-    color: rgba(106,127,134,.9294117647058824);
+    color: rgba(106, 127, 134, .9294117647058824);
 }
 
 .StackTools__right {
@@ -278,13 +278,13 @@ span {
     margin-top: 50px;
 }
 
-.StackTools__right>img{
+.StackTools__right>img {
     width: 100%;
 }
 
 /* -------------------StackJourney--------------- */
 
-.StackJourney{
+.StackJourney {
     background: #f7f9fb;
     min-height: 80vh;
 }
@@ -297,14 +297,14 @@ span {
 
 .StackJourney__container--heading {
     text-align: center;
-    color: rgba(10,45,71,.9294117647058824);
+    color: rgba(10, 45, 71, .9294117647058824);
     font-size: 30px;
 }
 
 .StackJourney__container--text {
     text-align: center;
     font-size: 18px;
-    color: rgba(106,127,134,.9294117647058824);
+    color: rgba(106, 127, 134, .9294117647058824);
     width: 60%;
     margin: 20px auto;
 }
@@ -324,7 +324,7 @@ span {
     align-self: center;
 }
 
-.StackProgram__main__left img{
+.StackProgram__main__left img {
     width: 100%;
 }
 
@@ -335,7 +335,7 @@ span {
 }
 
 .StackProgram__main__right--heading {
-    color: rgba(10,45,71,.9294117647058824);
+    color: rgba(10, 45, 71, .9294117647058824);
     font-size: 30px;
     margin-top: 50px;
     margin-bottom: 120px;
@@ -343,7 +343,7 @@ span {
 }
 
 .StackProgram__main__right--box {
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     font-weight: 500;
     width: 70%;
     margin: 0 auto;
@@ -372,7 +372,7 @@ span {
 }
 
 .StackProgram__main__right--box-one--text-container--text {
-    color: rgba(72,55,55,.9294117647058824);
+    color: rgba(72, 55, 55, .9294117647058824);
     margin-right: 21px;
 }
 
@@ -392,7 +392,7 @@ span {
     text-align: center;
     padding-top: 70px;
     margin-bottom: 70px;
-    color: rgba(10,45,71,.9294117647058824);
+    color: rgba(10, 45, 71, .9294117647058824);
     font-size: 30px;
 }
 
@@ -407,7 +407,7 @@ span {
 
 /* ------------------------StackMentors--------------------- */
 .StackMentors {
-    background: transparent linear-gradient(89deg,rgba(45,111,162,.8862745098039215),rgba(2,9,14,.9294117647058824)) 0 0 no-repeat padding-box;
+    background: transparent linear-gradient(89deg, rgba(45, 111, 162, .8862745098039215), rgba(2, 9, 14, .9294117647058824)) 0 0 no-repeat padding-box;
     min-height: 85vh;
 }
 
@@ -431,4 +431,187 @@ span {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+}
+
+
+@media screen and (max-width:900px) {
+    .fullStack-main {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .fullStack-main>.left {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .batch-container {
+        margin: 10px !important;
+    }
+
+    .StackTools {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .StackTools__left {
+        padding-right: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+    }
+
+    .StackTools__left--heading {
+        margin-top: 30px;
+    }
+
+    .StackTools__right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .StackProgram__main {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .StackProgram__main__left {
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .StackProgram__main__right {
+        width: 100%;
+        padding: 0 0 80px;
+    }
+
+    .StackProgram__main__right--heading {
+        margin-bottom: 50px;
+    }
+
+    .StackProgram__main__right--box {
+        width: 95%;
+    }
+
+    
+    .fullStack-batchDetails {
+        position: static;
+    }
+
+    .batchDetails-container {
+        padding: 15px 0;
+        flex-wrap: wrap;
+    }
+
+    .batchDetails-container>h4 {
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .fullStack-main>.right {
+        width: 100%;
+        position: static;
+    }
+
+
+    .batchDetails-section {
+        flex-wrap: wrap;
+    }
+
+    .batchDetails-date-container {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .batchDetails-enroll-container {
+        width: 50%;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+
+}
+
+@media screen and (max-width:500px) {
+    .fullStack-main>.left>.left-img-container {
+        width: 208px;
+        height: 84px;
+    }
+
+    .fullStack-main>.left>.left-img-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .fullStack-main>.left>h1 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .fullStack-main>.left>.left-text {
+        margin-bottom: 25px;
+    }
+
+    .fullStack-main>.left>.left-buttons {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    .fullStack-main>.left>.left-buttons button {
+        padding: 14px 35px 13px;
+    }
+
+    .batchDetails-atc-container {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        padding: 10px 10px 10px 0;
+        box-sizing: border-box;
+        background-color: #fff;
+        z-index: 30;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1607843137254902);
+    }
+
+    .batchDetails-atc-container>.enroll-now-btn {
+        width: 60%;
+    }
+
+    .batchDetails-atc-container>.try-free {
+        width: 40%;
+    }
+
+    .batchDetails-atc-container .enroll-now-btn>button {
+        width: 90% !important;
+        font-weight: 600;
+        padding: 15px 10px;
+    }
+
+    .batchDetails-atc-container>.try-free>button {
+        width: 90%;
+        padding: 15px 10px;
+    }
+
+    .StackJourney__container {
+        margin-bottom: 0;
+    }
+
+    .StackJourney__container--text {
+        width: 100%;
+    }
+
+
 }

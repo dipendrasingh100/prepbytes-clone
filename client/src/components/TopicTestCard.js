@@ -1,7 +1,18 @@
 import React from 'react'
 import "../css/topic-test.css"
+import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../app/cartSlice'
 
-const TopicTestCard = ({ title, thumb }) => {
+const TopicTestCard = ({ id, title, thumb }) => {
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+    const handleClick = () => {
+        dispatch(addToCart({ id, title, image: thumb, price: 50, description: "", type: "test" }))
+        localStorage.setItem("from", "/mock-tests")
+        navigate(`/checkout/${title}`)
+    }
     return (
         <div className='topic-mock-test-card'>
             <div className="topic-mock-test-card-image">
@@ -13,7 +24,7 @@ const TopicTestCard = ({ title, thumb }) => {
             </p>
 
             <div className="topic-mock-test-card--bottom">
-                <button>Pay & Register</button>
+                <button  onClick={handleClick}>Pay & Register</button>
             </div>
         </div>
     )

@@ -1,4 +1,4 @@
-.courseSyllabus-main{
+.courseSyllabus-main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +10,8 @@
     max-width: 1147px;
     margin: auto;
 }
-.CourseSyllabus__main-heading{
+
+.CourseSyllabus__main-heading {
     width: 100%;
     text-align: center;
     font-weight: 500;
@@ -19,7 +20,7 @@
     margin-bottom: 3rem;
 }
 
-.courseSyllabus-main span{
+.courseSyllabus-main span {
     font-weight: 500;
 }
 
@@ -48,7 +49,7 @@
     padding: .5rem 1rem;
     color: #00a6ec;
     background: #fff 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 8px rgba(133,133,133,.1607843137);
+    box-shadow: 0px 3px 8px rgba(133, 133, 133, .1607843137);
     border-radius: 10px;
     cursor: pointer;
     display: flex;
@@ -62,7 +63,7 @@
     margin-bottom: 1rem;
     width: 95%;
     border-radius: 10px;
-    box-shadow: 0px 1px 8px rgba(133,133,133,.1607843137);
+    box-shadow: 0px 1px 8px rgba(133, 133, 133, .1607843137);
     border-radius: 10px;
     cursor: pointer;
     display: flex;
@@ -106,7 +107,7 @@
     box-sizing: border-box;
     padding: 0rem 3rem;
     height: 100%;
-    box-shadow: 0px 2px 8px rgba(156,154,154,.1607843137);
+    box-shadow: 0px 2px 8px rgba(156, 154, 154, .1607843137);
     border-radius: 10px;
 }
 
@@ -121,7 +122,7 @@
     overflow-y: auto;
 }
 
-.CourseSyllabus__syllabus-container-category-container ul li{
+.CourseSyllabus__syllabus-container-category-container ul li {
     position: relative;
     padding-left: 2rem;
     margin: 1rem 0rem;
@@ -176,4 +177,23 @@
 
 .CoursePage-scrollbar::-webkit-scrollbar-track {
     background-color: #f5f5f5;
+}
+
+@media screen and (max-width:900px) {
+    .CourseSyllabus__syllabus-container {
+        flex-direction: column;
+    }
+
+    .CourseSyllabus__syllabus-subjects-container {
+        width: 100%;
+    }
+
+    .CourseSyllabus__syllabus-container-category-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .CourseSyllabus__syllabus-img {
+        display: none;
+    }
 }

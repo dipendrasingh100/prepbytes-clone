@@ -104,6 +104,126 @@
     width: 50%;
 }
 
-.coding-journey-right-container-card-three{
+.coding-journey-right-container-card-three {
     padding-left: 50px;
+}
+
+@media screen and (max-width:1024px) {
+    .coding-journey-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .coding-journey-left {
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .coding-journey-right {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .coding-journey-left>img {
+        display: none;
+    }
+
+    .coding-journey-right--heading {
+        font-size: 24px;
+    }
+
+    .coding-journey-right-container {
+        width: 65%;
+        margin: 0 auto;
+    }
+
+    .coding-journey-right-container-card-two .left{
+        left: 0;
+    }
+
+    .coding-journey-right-container-card-one .right {
+        left: 40%;
+        left: 45%;
+    }
+
+    .coding-journey-right-container-card-three {
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .coding-journey-right-container-card-three img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:900px){
+    .coding-journey-right-container{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    .coding-journey-right {
+        padding: 20px 10px;
+        width: 90%;
+    }
+
+    .coding-journey-right--heading {
+        font-size: 25px;
+        width: 100%;
+        margin: 10px auto;
+        text-align: left;
+    }
+
+    .coding-journey-right-container {
+        width: 95%;
+    }
+
+    .coding-journey-right-container-card-one .left {
+        width: 75%;
+    }
+
+    .coding-journey-right-container-card-one .right {
+        width: 65%;
+        left: 60%;
+    }
+
+    .coding-journey-right-container-card-one .left--heading,
+    .coding-journey-right-container-card-two .right--heading {
+        font-size: 16px;
+    }
+
+    .coding-journey-right-container-card-one .left-box,
+    .coding-journey-right-container-card-two .right-box {
+        width: 170px;
+    }
+
+    .coding-journey-right-container-card-one .left-box>p,
+    .coding-journey-right-container-card-two .right-box>p {
+        margin-left: 0;
+    }
+
+    .coding-journey-right-container-card-one .right img,
+    .coding-journey-right-container-card-two .left img {
+        height: 40px;
+    }
+
+    .coding-journey-right-container-card-two .left {
+        left: 0;
+    }
 }

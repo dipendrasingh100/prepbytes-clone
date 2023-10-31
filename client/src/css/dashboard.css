@@ -138,3 +138,17 @@
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+
+@media screen and (max-width:500px) {
+    /* .dashboard-side-nav .profile_container{
+        left: -50px;
+    } */
+
+    /* {
+        left: -82px !important;
+    } */
+
+    .n-mob{
+        left: -50px;
+    }
+}

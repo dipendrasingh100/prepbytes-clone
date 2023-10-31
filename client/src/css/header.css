@@ -171,7 +171,9 @@ nav {
     padding: 0 15px;
     width: 50%;
     min-width: 220px;
+    max-height: calc(100vh - 100px);
     height: 100%;
+    overflow-y: auto;
     background-color: #fff;
 }
 
@@ -215,6 +217,10 @@ menu.user {
     display: inline-block;
 }
 
+menu.header-mob{
+    display: block;
+}
+
 .user .user_name {
     height: 100%;
     margin-left: 55px;
@@ -233,6 +239,10 @@ menu.user {
     top: -10px;
     left: 22px;
     position: absolute;
+}
+
+.mob{
+    width: 100% !important;
 }
 
 .user .avtar-circle {
@@ -292,13 +302,13 @@ menu.user {
     align-items: center;
 }
 
-.logout{
+.logout {
     border-bottom: none;
     cursor: pointer;
     padding: 20px 10px;
 }
 
-.logout>p{
+.logout>p {
     color: #ff8787;
     font-weight: 500;
     font-size: 14px;
@@ -319,11 +329,12 @@ menu.user {
     margin-left: 12px;
 }
 
-.ea:hover a{
+.ea:hover a {
     color: #000;
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:1024px) {
+
     .wide-container {
         display: none;
     }
@@ -333,9 +344,15 @@ menu.user {
     }
 }
 
+@media screen and (max-width:900px) {}
+
 @media screen and (max-width:500px) {
     .narrow-container {
         width: 40%;
+        padding: unset;
+    }
+    .narrow-container>svg{
+        margin-right: 15px;
     }
 
     .header-container {
@@ -345,5 +362,28 @@ menu.user {
 
     .narrow-sub-conatiner {
         width: 60%;
+        min-width: 240px;
+    }
+
+    .main-header menu.user{
+        text-align: start;
+    }
+
+    .main-header .user .user_name{
+        margin: 0;
+        width: 100%;
+    }
+
+    .main-header .user .group{
+        position: static;
+        margin: 0;
+    }
+
+    .main-header .user .options{
+        padding: 0;
+    }
+
+    .main-header .options-item-box{
+        padding: 15px 0;
     }
 }

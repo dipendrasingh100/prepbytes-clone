@@ -56,6 +56,7 @@ const Elevation = () => {
                                         <span>17th April</span>
                                     </div>
                                 </div>
+                                <div className="NewBatch__main_right_point_container_connector_line_vertical"></div>
                             </div>
                             <div className="right-point-outer">
                                 <div className="newBatch-right-point-container">
@@ -65,6 +66,7 @@ const Elevation = () => {
                                         <span>From 18th April</span>
                                     </div>
                                 </div>
+                                <div className="NewBatch__main_right_point_container_connector_line_vertical"></div>
                             </div>
                             <div className="right-point-outer">
                                 <div className="newBatch-right-point-container">

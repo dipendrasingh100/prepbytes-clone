@@ -37,6 +37,15 @@
     margin-left: 25px;
 }
 
+.dashboard-right-container .user .group {
+    top: 20px;
+    width: 100%;
+}
+
+.dashboard-right-container .user .options {
+    top: 75px;
+}
+
 .dashboard-logo img {
     float: left;
     height: 75px;
@@ -165,8 +174,54 @@
     background-color: #03A6EC;
 }
 
-.dashboard-profile-container .jss39>span{
+.dashboard-profile-container .jss39>span {
     margin-left: 10px;
     letter-spacing: 0;
     opacity: 1;
+}
+
+@media screen and (max-width:900px) {
+    .dashboard-side-nav {
+        position: fixed;
+        z-index: 20;
+        height: 100%;
+    }
+    
+}
+
+@media screen and (max-width:500px) {
+
+    .dashboard-menu-list,
+    .dashboard-header .user .group>span {
+        display: none;
+    }
+    .dashboard-right-container{
+        margin-left: unset;
+    }
+
+    .navbar-container {
+        width: 20%;
+    }
+
+    .dashboard-right-container .user .options {
+        top: 54px;
+        left: -128px;
+    }
+
+    .dashboard-right-container .user .user_name {
+        margin-left: 0;
+        width: unset;
+    }
+
+    .dashboard-right-container .user .group {
+        top: 10px;
+    }
+
+    .profile_nav_close{
+        width: 0px !important;
+    }
+
+    .dashboard-main{
+        padding: 2rem;
+    }
 }

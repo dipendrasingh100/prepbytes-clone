@@ -16,10 +16,10 @@ const Dashboard = ({ navClose, setNavClose }) => {
     <div className='dashboard-section-container'>
       <div className="dashboard-side-nav">
         <div className={`profile_nav ${navClose ? "profile_nav_close" : ""}`}>
-          <div className="profile_container">
+          <div className={`profile_container `}>
             <div className="profile-mycourses">
               <div className={`profile_nav_selected ${navClose ? "profile_nav_close" : ""}`}>
-                <span className="profile_nav-list-icon">
+                <span className={`profile_nav-list-icon ${navClose ? "n-mob" : ""}`}>
                   <GiGraduateCap />
                 </span>
                 <div className={`${navClose ? "profile_nav-list-detail-close" : "profile_nav-list-detail"}`}>

@@ -108,8 +108,38 @@ const CompetitiveCourse = () => {
                                         <div className="slick-track">
                                             <MentorCard name='Mamta' profile={M1} role='Co-Founder, PrepBytes' compimg={Company1} />
                                             <MentorCard name='Kushdeep' profile={M2} role='SDE, ShareChat' compimg={Company2} />
-                                            <MentorCard name='Aveek' profile={M3} role='Co-Founder, PrepBytes' compimg={Company3} />
+                                            <MentorCard name='Aveek' profile={M3} role='Mentor, PrepBytes' compimg={Company3} />
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="CoursePageMentors__other-mentor-heading-mbl">
+                                Other Mentors You Will Be Interacting With
+                            </div>
+
+                            <div className="CoursePageMentors__other-mentor-container-mbl" style={{ height: "420px", bottom: "-400px" }}>
+                                <div className="CoursePageMentors__card-mbl">
+                                    <img src={M1} alt="profile" />
+                                    <div className="mentor-slider-details">
+                                        <h4>Mamta</h4>
+                                        <p>Co-Founder, PrepBytes</p>
+                                        <img src={Company1} alt="company" />
+                                    </div>
+                                </div>
+                                <div className="CoursePageMentors__card-mbl">
+                                    <img src={M2} alt="profile" />
+                                    <div className="mentor-slider-details">
+                                        <h4>Kushdeep</h4>
+                                        <p>SDE, ShareChat</p>
+                                        <img src={Company2} alt="company" />
+                                    </div>
+                                </div>
+                                <div className="CoursePageMentors__card-mbl">
+                                    <img src={M3} alt="profile" />
+                                    <div className="mentor-slider-details">
+                                        <h4>Aveek</h4>
+                                        <p>Mentor, PrepBytes</p>
+                                        <img src={Company3} alt="company" />
                                     </div>
                                 </div>
                             </div>
@@ -214,6 +244,8 @@ const CompetitiveCourse = () => {
                             <div className="CoursePageLearnings__content-container">
                                 <img src={Vecto2} alt="end logo" />
                                 <div className="CoursePageLearnings__details-container">
+                                    <h5>By The End Of This Course, You Will Be Able To</h5>
+
                                     <CourseHighlightCardEnd icon={One} text='4 star and above in CodeChef' color="#df3897" />
                                     <CourseHighlightCardEnd icon={Two} text='Crack contests like Facebook Hacker Cup, Google Kickstart, ACM ICPC' color="#0398d3" />
                                     <CourseHighlightCardEnd icon={Three} text='Candidate master and above in CodeForces' color="#7914a3" />
