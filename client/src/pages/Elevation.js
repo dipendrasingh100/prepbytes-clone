@@ -7,7 +7,6 @@ import BatchStart from "../assets/images/Batch+Starts.webp"
 import RegisterForm from '../components/ea/RegisterForm'
 import Journey from '../components/ea/Journey'
 import EaSyllabus from '../components/ea/EaSyllabus'
-import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { handleLink } from '../utils/helperFuction'
 import { getCourse } from '../app/courseSlice'

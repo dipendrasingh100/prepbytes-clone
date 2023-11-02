@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import "../../css/ea/syllabus.css"
 import EaSyllabusCard from './EaSyllabusCard.js'
 
