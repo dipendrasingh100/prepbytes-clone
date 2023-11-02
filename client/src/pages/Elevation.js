@@ -16,6 +16,7 @@ import Tick from "../assets/images/ea/righttick.svg"
 import MentorCard from '../components/ea/MentorCard'
 import Webinar from '../components/ea/Webinar'
 import MetricsCard from '../components/ea/MetricsCard'
+import MetaData from '../components/MetaData'
 
 
 const companies = [
@@ -75,6 +76,8 @@ const Elevation = () => {
             {isLoading
                 ? <Loader />
                 : <>
+                    <MetaData title='Elevation Academy | Full Stack Web Development | PrepBytes' />
+
                     <div className='elevationCourse'>
                         <div className="elevationCourse-header">
                             <section className="elevationCourse-header-main" style={{ backgroundColor: 'rgb(253, 240, 215)' }}>

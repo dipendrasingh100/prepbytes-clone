@@ -40,6 +40,7 @@ import MCPSyllabus from '../components/mcp/MCPSyllabus'
 import MCPTestimonial from '../components/mcp/MCPTestimonial'
 import CourseHighlightCardEnd from '../components/mcp/CourseHighlightCardEnd'
 import Loader from '../components/Loader'
+import MetaData from '../components/MetaData'
 
 
 const CompetitiveCourse = () => {
@@ -69,6 +70,8 @@ const CompetitiveCourse = () => {
             {
                 isLoading ? <Loader /> :
                     <div className='course-page-container'>
+                        <MetaData title='Placement Preparations | PrepBytes' />
+
                         <div className="course-page-header">
                             <div className="course-page-header--fixed-btn-container">
                                 <img src={ApplyNow} alt="Apply now Img" />

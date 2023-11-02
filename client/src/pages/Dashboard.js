@@ -4,6 +4,7 @@ import { GiGraduateCap } from 'react-icons/gi'
 import EnrolledCourseCard from '../components/EnrolledCourseCard'
 import { useDispatch, useSelector } from 'react-redux'
 import { getMyCourses } from '../app/userSlice'
+import MetaData from '../components/MetaData'
 
 const Dashboard = ({ navClose, setNavClose }) => {
   const { user } = useSelector(state => state.user)
@@ -14,6 +15,8 @@ const Dashboard = ({ navClose, setNavClose }) => {
   }, [dispatch])
   return (
     <div className='dashboard-section-container'>
+      <MetaData title='Dashboard | PrepBytes' />
+
       <div className="dashboard-side-nav">
         <div className={`profile_nav ${navClose ? "profile_nav_close" : ""}`}>
           <div className={`profile_container `}>

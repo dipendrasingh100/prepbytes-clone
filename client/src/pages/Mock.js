@@ -6,6 +6,7 @@ import { getTests } from '../app/mockSlice'
 import TopicTestCard from '../components/TopicTestCard'
 import { handleLink } from '../utils/helperFuction'
 import Loader from "../components/Loader"
+import MetaData from '../components/MetaData'
 
 const Mock = () => {
     const dispatch = useDispatch()
@@ -19,6 +20,8 @@ const Mock = () => {
         <div className='mock-main'>
             {isLoading ? <Loader />
                 : <>
+                    <MetaData title='Mock Tests | Technical and Aptitude Test | PrepBytes' />
+
                     <div className="mock-header">
                         <div className="mock-header-container">
                             <h2 className="mock-header-top">

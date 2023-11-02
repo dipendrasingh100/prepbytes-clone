@@ -35,6 +35,7 @@ import StackMentorCard from '../components/fs/StackMentorCard'
 import Loader from '../components/Loader'
 import StackJourneyIpad from '../components/fs/StackJourneyIpad'
 import FsSyllabus from '../components/fs/FsSyllabus'
+import MetaData from '../components/MetaData'
 
 
 const journey = [
@@ -110,6 +111,8 @@ const FullStackCourse = () => {
         <>
             {isLoading ? <Loader /> :
                 <div className='fullStack-page-container'>
+                    <MetaData title='Learn Full Stack Web Development | MERN Certification Program | PrepBytes' />
+
                     <div className="fullStack-header">
                         <section className="fullStack-main">
                             <div className="left">
