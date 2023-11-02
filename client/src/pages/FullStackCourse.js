@@ -33,7 +33,59 @@ import StackCompaniesCard from '../components/fs/StackCompaniesCard'
 import Statistics from '../components/fs/Statistics'
 import StackMentorCard from '../components/fs/StackMentorCard'
 import Loader from '../components/Loader'
+import StackJourneyIpad from '../components/fs/StackJourneyIpad'
+import FsSyllabus from '../components/fs/FsSyllabus'
 
+
+const journey = [
+    {
+        title: "Batch Commencement",
+        content: [
+            "Get access to dashboard & complete plan",
+            "Introduction with lead mentor for this program",
+            "Access to recorded video lectures",
+            "Access to Mock Tests",
+            "One live session with mentors per week",
+            "Every live session will be of 2 hours duration"
+        ],
+        thumb: "https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/full-stack/how-it-works/works_batchcommencement.svg"
+    },
+    {
+        title: "Learn required languages, framework & tools",
+        content: [
+            "Live online classes of Javascript, ReactJs, NodeJs,Express, HTML & CSS",
+            "Learn the industry wide used tools like MongoDB, Git & Jira"
+        ],
+        thumb: "https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/full-stack/how-it-works/works_language-full+stack.svg"
+    },
+    {
+        title: "Complete awesome real world projects",
+        content: [
+            "HTML Blog Page",
+            "Reminder Clock App",
+            "Todo App",
+            "React Blog",
+            "Chat App",
+            "E-commerce Web App"
+        ],
+        thumb: "https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/full-stack/how-it-works/works_projects.svg"
+    },
+    {
+        title: "Experience the complete development lifecycle",
+        content: [
+            "Learn the Agile Development Methodology",
+            "Real time experience of complete software development lifecycle from development to deployment"
+        ],
+        thumb: "https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/full-stack/how-it-works/works_lifecycle.svg"
+    },
+    {
+        title: "Be a certified Full Stack Developer",
+        content: [
+            "Get certificate of course completion on completing projects, assignments & mock tests"
+        ],
+        thumb: "https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/full-stack/how-it-works/works_getcertified.svg"
+    },
+]
 const FullStackCourse = () => {
 
     const [check, setCheck] = useState(0)
@@ -157,7 +209,8 @@ const FullStackCourse = () => {
                                 We have designed a unique program where you can learn Full stack & experience being a developer sitting at your home
                             </p>
                         </div>
-                        <StackJourney />
+                        <StackJourney journey={journey} />
+                        <StackJourneyIpad journey={journey} />
                     </div>
 
                     <div className="StackProgram">
@@ -177,6 +230,8 @@ const FullStackCourse = () => {
                             </div>
                         </div>
                     </div>
+
+                    <FsSyllabus />
 
                     <div className="StackCompanies">
                         <div className="StackCompanies__main">

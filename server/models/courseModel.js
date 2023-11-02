@@ -30,7 +30,7 @@ const courseSchema = new Schema({
             },
             image: String,
             duration: {
-                type: Number
+                type: String
             },
             content: {
                 type: [String]
