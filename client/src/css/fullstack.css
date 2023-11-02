@@ -433,6 +433,34 @@ span {
     flex-wrap: wrap;
 }
 
+.StackMetrics {
+    max-width: 1280px;
+    margin: 50px auto;
+}
+
+.StackMetrics--img {
+    width: 100%;
+    height: 100%;
+}
+
+.StackFaq {
+    max-width: 1280px;
+    padding: 0 20px;
+    margin: 50px auto 0;
+}
+
+.StackFaq__heading {
+    color: rgba(10, 45, 71, .9294117647058824);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.StackFaq__wrapper {
+    max-width: 980px;
+    padding: 0 20px;
+    margin: 0 auto 80px;
+}
 
 @media screen and (max-width:900px) {
     .fullStack-main {
@@ -501,7 +529,7 @@ span {
         width: 95%;
     }
 
-    
+
     .fullStack-batchDetails {
         position: static;
     }

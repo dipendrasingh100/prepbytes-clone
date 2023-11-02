@@ -1,0 +1,27 @@
+.PrepTestimonials__main {
+    max-width: 1088px;
+    margin: 0 auto;
+    padding: 80px 0;
+    min-height: 50px;
+}
+
+.PrepTestimonials__main-top {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: center;
+}
+
+.PrepTestimonials__main-top--text {
+    color: #3e4041;
+    font-size: 35px;
+    font-weight: 600;
+    width: 60%;
+    line-height: 1.4;
+    margin: auto auto 12px;
+    padding: 1rem;
+    text-align: center;
+}

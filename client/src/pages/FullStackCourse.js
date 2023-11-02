@@ -36,6 +36,8 @@ import Loader from '../components/Loader'
 import StackJourneyIpad from '../components/fs/StackJourneyIpad'
 import FsSyllabus from '../components/fs/FsSyllabus'
 import MetaData from '../components/MetaData'
+import Testimonial from '../components/Testimonial'
+import FaqPanel from '../components/FaqPanel'
 
 
 const journey = [
@@ -234,8 +236,6 @@ const FullStackCourse = () => {
                         </div>
                     </div>
 
-                    <FsSyllabus />
-
                     <div className="StackCompanies">
                         <div className="StackCompanies__main">
                             <p className="StackCompanies__main--heading">
@@ -249,7 +249,6 @@ const FullStackCourse = () => {
                             </div>
                         </div>
                     </div>
-
                     <Statistics />
 
                     <div className="StackMentors">
@@ -264,6 +263,29 @@ const FullStackCourse = () => {
                             </div>
                         </div>
                     </div>
+
+                    <FsSyllabus />
+
+                    <Testimonial />
+
+                    <div className="StackMetrics">
+                        <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/digital-marketing/Feature.webp" alt="stack metrics" className="StackMetrics--img" />
+                    </div>
+
+                    <div className="StackFaq">
+                        <p className="StackFaq__heading">
+                            FAQs
+                        </p>
+                    </div>
+
+                    <div className="StackFaq__wrapper">
+                        <FaqPanel ques="What is the duration of this program?" ans="Duration of this program is 3-4 months"/>
+                        <FaqPanel ques="What will be the primary language for this program?" ans="Javascript would be the primary language."/>
+                        <FaqPanel ques="Is there any pre-requisite for this program?" ans="No, there are no pre-requisites."/>
+                        <FaqPanel ques="What if I miss the Live sessions?" ans="Although its highly recommended to not miss the live project sessions but in case if missed recording of the session would be added in your dashboard."/>
+                        <FaqPanel ques="How is this program different from other full stack courses?" ans="This program provides not only learning but also complete experience of a full stack developer & software development cycle."/>
+                    </div>
+
                 </div>}
         </>
     )

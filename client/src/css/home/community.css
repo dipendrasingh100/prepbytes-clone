@@ -1,0 +1,148 @@
+.Community {
+    background: #fff;
+    min-height: 50px;
+}
+
+.Community__main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.Community__main--heading {
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 10px;
+    color: #424242;
+    font-size: 35px;
+}
+
+.Community__main--heading span {
+    font-weight: 600;
+}
+
+.Community__main--subheading {
+    text-align: center;
+    width: 50%;
+    color: #858585;
+    margin: 0 auto 80px;
+}
+
+.Community__main-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.Community__main-container-card {
+    -webkit-box-shadow: 0 3px 30px rgba(0, 0, 0, .1607843137254902);
+    box-shadow: 0 3px 30px rgba(0, 0, 0, .1607843137254902);
+    border-radius: 4px;
+    background: #fff;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 24em;
+    flex: 0 0 24em;
+    height: 528px;
+    margin: 20px 20px 50px;
+    position: relative;
+    transition: transform .1s ease-out;
+}
+
+.Community__main-container-card-image {
+    padding: 0 15px;
+}
+
+.Community__main-container-card-image--img {
+    margin-top: -40px;
+    height: 100%;
+    width: 100%;
+}
+
+.Community__main-container-card--heading {
+    color: #424242;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 52px 5px;
+    text-align: center;
+}
+
+.Community__main-container-card--subheading {
+    color: #858585;
+    font-size: 16px;
+    padding: 10px 50px;
+    text-align: center;
+}
+
+.Community__main-container-card-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+}
+
+.Community__main-container-card:hover {
+    transform: translateY(-3px);
+}
+
+.Community__main-container-card-button--btn {
+    padding: 11px 70px;
+    font-size: 18px;
+    background: #00a5ec;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+@media screen and (max-width:900px) {
+    .Community__main--subheading {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .Community__main {
+        padding-bottom: 0;
+    }
+
+    .Community__main--heading {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 25px;
+    }
+
+    .Community__main--heading {
+        padding-top: 50px;
+    }
+
+    .Community__main--subheading {
+        width: 90%;
+        margin-bottom: 80px;
+    }
+
+    .Community__main-container-card {
+        -ms-flex: 0 0 22em;
+        flex: 0 0 22em;
+        max-width: 300px;
+    }
+
+    .Community__main-container-card--heading {
+        font-size: 18px;
+    }
+
+    .Community__main-container-card-button {
+        bottom: 18px;
+    }
+}

@@ -17,6 +17,8 @@ import MentorCard from '../components/ea/MentorCard'
 import Webinar from '../components/ea/Webinar'
 import MetricsCard from '../components/ea/MetricsCard'
 import MetaData from '../components/MetaData'
+import Testimonial from '../components/Testimonial'
+import Faq from '../components/ea/Faq'
 
 
 const companies = [
@@ -102,7 +104,7 @@ const Elevation = () => {
                                     </ul>
                                     <div className="left-buttons">
                                         <button onClick={() => setShowForm(true)}>Apply Now</button>
-                                        <button>Get a call back</button>
+                                        <button onClick={() => setShowForm(true)}>Get a call back</button>
                                     </div>
                                 </div>
                                 <div className="right">
@@ -180,6 +182,8 @@ const Elevation = () => {
                             </div>
                         </div>
                     </section>
+
+                    <Testimonial />
 
                     <div className="StudentsPlaced">
                         <div className="StudentsPlaced__main">
@@ -297,6 +301,8 @@ const Elevation = () => {
                             </div>
                         </div>
                     </div>
+
+                    <Faq />
                 </>
             }
         </>
