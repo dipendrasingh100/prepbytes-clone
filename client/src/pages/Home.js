@@ -10,6 +10,7 @@ import CodingJourney from '../components/CodingJourney'
 import CourseTypes from '../components/CourseTypes'
 import HomeJourney from '../components/HomeJourney'
 import GetCallback from '../components/GetCallback'
+import KnowDetails from '../components/home/KnowDetails'
 
 const Home = () => {
   return (
@@ -42,8 +43,12 @@ const Home = () => {
         <CodingJourney />
         <CourseTypes />
         <HomeJourney />
+        <div>
+          <KnowDetails />
+        </div>
 
         <GetCallback />
+
       </div>
     </>
   )
