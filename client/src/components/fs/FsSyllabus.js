@@ -2,6 +2,7 @@ import React from 'react'
 import "../../css/fs/syllabus.css"
 import TopicCard from './TopicCard'
 import { useSelector } from 'react-redux'
+import TopicCardProject from './TopicCard_Project'
 
 const FsSyllabus = () => {
 
@@ -25,9 +26,11 @@ const FsSyllabus = () => {
                 </p>
             </div>
             {course && course?.syllabus.map((item, index) => (
-                <TopicCard topic={item.topic} description={item.description} duration={item.duration} content={item.content} />
+                <TopicCard key={index} topic={item.topic} description={item.description} duration={item.duration} content={item.content} />
             ))
             }
+
+            <TopicCardProject projects={course?.projects} />
         </div>
     )
 }

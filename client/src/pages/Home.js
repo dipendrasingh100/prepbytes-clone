@@ -17,6 +17,11 @@ import Testimonial from '../components/home/Testimonial'
 import PopularProjectCard from '../components/home/PopularProjectCard'
 
 const Home = () => {
+
+  const handleClick = () => {
+    const element = document.getElementById('courses');
+    element.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <>
       <MetaData title='Master in Competitive Coding | Crack Coding Interviews | PrepBytes' />
@@ -27,7 +32,7 @@ const Home = () => {
             <h1 className='home-top-left--subheading'>Personalised Coding Programs to make coding easier for you</h1>
             <h1 className='home-top-left--last'>Want to know how PrepBytes can help you?</h1>
             <div className="home-top-left-button">
-              <button >Know More</button>
+              <button onClick={handleClick}>Know More</button>
             </div>
           </div>
           <div className="home-top-right">
@@ -61,7 +66,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* <Testimonial /> */}
+        <Testimonial />
 
         <section className="PrepBytesPlacedStudents">
           <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/you_could_be_the(web_1366).png" alt="placed students" className="PrepBytesPlacedStudents-img" />

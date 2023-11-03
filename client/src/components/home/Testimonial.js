@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "../../css/home/testimonial.css"
+import Carousel from 'react-multi-carousel';
+import TestimonialCard from '../TestimonialCard';
 
 const placedStudents = [
     {
@@ -65,8 +67,26 @@ const placedStudents = [
 ]
 
 const Testimonial = () => {
-
-    const [student, setStudent] = useState(0)
+    const responsive = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
+    // const [student, setStudent] = useState(0)
     return (
         <div className='PrepTestimonials__main'>
             <div className="PrepTestimonials__main-top">
@@ -75,7 +95,7 @@ const Testimonial = () => {
                 </p>
             </div>
 
-            <div className="PrepTestimonials__main-container">
+            {/* <div className="PrepTestimonials__main-container">
                 <div className="PrepTestimonialsTop">
                     <div className="PrepTestimonialsTop__slide">
                         <div className="PrepTestimonialsTop__slide__item">
@@ -91,7 +111,16 @@ const Testimonial = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
+
+            <Carousel responsive={responsive} >
+                {
+                    placedStudents.map((item, index) => (
+                        <TestimonialCard key={index} profile={item.profile} name={item.name} review={item.review} company={item.company} />
+                    ))
+                }
+            </Carousel>
+
         </div>
     )
 }

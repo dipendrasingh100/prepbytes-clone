@@ -11,7 +11,7 @@ import "../css/course_types.css"
 const CourseTypes = () => {
     return (
         <div>
-            <section className="course-types">
+            <section className="course-types" id='courses'>
                 <div className="course-types-container">
                     <p className="course-types--heading">
                         I want to

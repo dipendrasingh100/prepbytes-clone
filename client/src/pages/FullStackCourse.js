@@ -38,6 +38,7 @@ import FsSyllabus from '../components/fs/FsSyllabus'
 import MetaData from '../components/MetaData'
 import Testimonial from '../components/Testimonial'
 import FaqPanel from '../components/FaqPanel'
+import Certification from '../components/fs/Certification'
 
 
 const journey = [
@@ -88,6 +89,52 @@ const journey = [
         ],
         thumb: "https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/full-stack/how-it-works/works_getcertified.svg"
     },
+]
+
+const placedStudents = [
+    {
+        name: "Yuvraj",
+        company: "Nagarro",
+        profile: "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/placement-preparation-program/Yuvraj.png",
+        review: "Thanks PrepBytes Your course really helped me lot , helped me Crack my company Nagarro through my campus placements. I also cracked TCS Codevita.Thank you so much"
+    },
+    {
+        name: "Shivani Ravi",
+        company: "SAP Labs",
+        profile: "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/testimonials/shivani+Ravi.jpg",
+        review: "PrepBytes have helped me improve my analytical skills. They have helped me in all the ways possible. The understanding of questions and logic has also increased. Now I can solve questions and understand the logic."
+    },
+    {
+        name: "Nikhil",
+        company: "SAP Labs",
+        profile: "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/testimonials/Nikhil.jpg",
+        review: "I enrolled in PrepBytes Zenith Placement Program to get help in placement preparations for tech giants and got placed in SAP labs. I got a mentor who was very knowledgeable & guided me throughout my placement journey."
+    },
+
+    {
+        name: "Aquib",
+        company: "Squareboat",
+        profile: "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/placement-preparation-program/Aquib.png",
+        review: "The program started with providing me with a personalized plan which stretched for about 4-5 month including lectures, live sessions.During the course, the students were constantly shared with upcoming job opportunities. Overall it was a great learning experience which immensely helped me prepare for placements, especially technical interviews."
+    },
+    {
+        name: "Akshay",
+        company: "Indiamart",
+        profile: "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/placement-preparation-program/Akshay_indiamart.png",
+        review: "A wonderful place to learn. PrepBytes helped me in learning important topics for coding interiew and also getting placed in Indiamart. "
+    },
+    {
+        name: "Nazim",
+        company: "Samsung",
+        profile: "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/placement-preparation-program/Najim_samsung-1.png",
+        review: "Being from the ECE branch I have started my coding from scratch in my final year. It took me 3–4 months to improve my coding skills. Believe me, so all you need to have some patience & desire to learn within just 3–4 months you will see a huge difference in yourself. I would really recommend you to join the courses at Prepbytes."
+    },
+    {
+        name: "Chelsea",
+        company: "Juspay",
+        profile: "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/placement-preparation-program/chelsea_Juspay-1.png",
+        review: "Prepbytes really helped me start my prep from basic. The teachers are really helpful and were always available to clear my doubts. Thats the reason I was able to crack the interview and land an internship."
+    }
 ]
 const FullStackCourse = () => {
 
@@ -266,7 +313,9 @@ const FullStackCourse = () => {
 
                     <FsSyllabus />
 
-                    <Testimonial />
+                    <Certification />
+
+                    <Testimonial placedStudents={placedStudents} />
 
                     <div className="StackMetrics">
                         <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/digital-marketing/Feature.webp" alt="stack metrics" className="StackMetrics--img" />
@@ -279,11 +328,11 @@ const FullStackCourse = () => {
                     </div>
 
                     <div className="StackFaq__wrapper">
-                        <FaqPanel ques="What is the duration of this program?" ans="Duration of this program is 3-4 months"/>
-                        <FaqPanel ques="What will be the primary language for this program?" ans="Javascript would be the primary language."/>
-                        <FaqPanel ques="Is there any pre-requisite for this program?" ans="No, there are no pre-requisites."/>
-                        <FaqPanel ques="What if I miss the Live sessions?" ans="Although its highly recommended to not miss the live project sessions but in case if missed recording of the session would be added in your dashboard."/>
-                        <FaqPanel ques="How is this program different from other full stack courses?" ans="This program provides not only learning but also complete experience of a full stack developer & software development cycle."/>
+                        <FaqPanel ques="What is the duration of this program?" ans="Duration of this program is 3-4 months" />
+                        <FaqPanel ques="What will be the primary language for this program?" ans="Javascript would be the primary language." />
+                        <FaqPanel ques="Is there any pre-requisite for this program?" ans="No, there are no pre-requisites." />
+                        <FaqPanel ques="What if I miss the Live sessions?" ans="Although its highly recommended to not miss the live project sessions but in case if missed recording of the session would be added in your dashboard." />
+                        <FaqPanel ques="How is this program different from other full stack courses?" ans="This program provides not only learning but also complete experience of a full stack developer & software development cycle." />
                     </div>
 
                 </div>}
